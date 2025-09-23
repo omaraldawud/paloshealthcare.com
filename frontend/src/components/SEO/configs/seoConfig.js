@@ -22,5 +22,17 @@ export const seoConfig = {
     image: "/images/about-og.jpg",
     twitterHandle: "@PalosHealthcare",
   },
+  "medical-businesses": {
+    title:
+      "Medical Businesses Directory | Healthcare Providers, Clinics & Hospitals",
+    description:
+      "Find verified medical businesses, healthcare providers, clinics, and hospitals in our comprehensive directory. Connect with trusted healthcare services.",
+    keywords:
+      "medical businesses directory, healthcare providers, medical clinics, hospitals near me, healthcare services, medical directory",
+    url: "https://paloshealthcare.com/medical-businesses",
+    image: "/images/medical-businesses-og.jpg",
+    twitterHandle: "@PalosHealthcare",
+  },
+
   // ...other pages
 };

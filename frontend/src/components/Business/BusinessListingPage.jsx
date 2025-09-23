@@ -1,5 +1,17 @@
 import React, { useState } from "react";
 import Layout from "../Layout/Layout";
+//JASON-LT Metas
+import {
+  SEOMeta,
+  seoConfig,
+  breadcrumbConfig,
+  faqConfig,
+  serviceConfig,
+  BreadcrumbSchema,
+  FAQSchema,
+  ServiceSchema,
+} from "../SEO";
+
 import HeroInfoBox from "../Layout/hero/HeroInfoBox";
 import BusinessCard from "./cards/BusinessCard";
 import BusinessListingSideBar from "./functional/BusinessListingSideBar";
@@ -31,7 +43,14 @@ const BusinessListingPage = () => {
   const sortedBusinesses = sortBusinesses(filteredBusinesses);
 
   return (
-    <Layout>
+    <>
+      <div>
+        {/* SEO Meta */}
+        <SEOMeta {...seoConfig.home} />
+        <BreadcrumbSchema items={breadcrumbConfig.home} />
+        <FAQSchema questions={faqConfig.home} />
+        <ServiceSchema services={serviceConfig.home} />
+      </div>
       <HeroInfoBox
         title="Find & Manage Your Free Medical Listing"
         heroIMG={heroIMGmedical2}
@@ -39,67 +58,90 @@ const BusinessListingPage = () => {
         desc="Update your business details, showcase your services, and ensure patients can easily find, trust, and connect with your practice."
         cta_text="Claim Your Free Listing Today"
       />
-
-      <div className="container py-5">
-        <h1 className="mb-4">Medical Businesses Directory</h1>
-
-        {/* Filters */}
-        <div className="mb-4 d-flex gap-2 flex-wrap">
-          {["all", "featured", "clinic", "hospital", "urgentcare"].map((f) => (
-            <button
-              key={f}
-              className={`btn ${
-                filter === f ? "btn-primary" : "btn-outline-primary"
-              }`}
-              onClick={() => setFilter(f)}
-            >
-              {f.charAt(0).toUpperCase() + f.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        {/* Search */}
-        <div className="mb-4 d-flex justify-content-center">
-          <div className="input-group" style={{ maxWidth: "700px" }}>
-            <input
-              type="text"
-              className="form-control form-control-lg rounded-start-pill shadow-sm border-primary"
-              placeholder="🔍 Search by name..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button
-              className="btn btn-primary btn-lg rounded-end-pill shadow-sm"
-              type="button"
-              onClick={() => console.log("🔍 Search clicked:", search)}
-            >
-              🔍 Search
-            </button>
+      <div className="mb-5">
+        {/* Row 1: Title */}
+        <div className="row justify-content-center text-center mb-4">
+          <div className="col-12">
+            <h1 className="display-5 fw-bold text-primary">
+              Medical Businesses Directory
+            </h1>
+            <p className="lead text-muted">
+              Find and connect with healthcare providers in your area
+            </p>
           </div>
         </div>
 
-        {/* Main listing + sidebar */}
-        <div className="row">
-          {/* Main listings: 8 cols */}
-          <div className="col-lg-8">
-            {sortedBusinesses.length ? (
-              sortedBusinesses.map((b) => (
-                <div key={b.id} className="col-12 mb-4">
-                  <BusinessCard business={b} />
-                </div>
-              ))
-            ) : (
-              <p className="text-muted">No businesses found.</p>
-            )}
+        {/* Row 2: Search */}
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-5 col-md-8">
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control form-control-lg rounded-start-pill border-primary shadow-sm"
+                placeholder="🔍 Search by name, specialty, or location..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyPress={(e) =>
+                  e.key === "Enter" && console.log("🔍 Search clicked:", search)
+                }
+              />
+              <button
+                className="btn btn-primary btn-lg rounded-end-pill shadow-sm px-4"
+                type="button"
+                onClick={() => console.log("🔍 Search clicked:", search)}
+              >
+                🔍 Search
+              </button>
+            </div>
           </div>
+        </div>
 
-          {/* Sidebar: 4 cols */}
-          <div className="col-lg-4">
-            <BusinessListingSideBar />
+        {/* Row 3: Filters */}
+        <div className="row justify-content-center">
+          <div className="col-12 text-center">
+            <div className="d-flex justify-content-center flex-wrap gap-3">
+              {[
+                "all",
+                "featured",
+                "clinic",
+                "hospital",
+                "urgentcare",
+                "dentist",
+              ].map((f) => (
+                <button
+                  key={f}
+                  className={`btn btn-lg ${
+                    filter === f ? "btn-warning" : "btn-outline-primary"
+                  } rounded-pill px-4`}
+                  onClick={() => setFilter(f)}
+                >
+                  {f.charAt(0).toUpperCase() + f.slice(1)}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </Layout>
+      <Layout sidebar={<BusinessListingSideBar />}>
+        <div className="container ">
+          {/* Main listing + sidebar */}
+          <div className="row">
+            {/* Main listings: 8 cols - One business card per row */}
+            <div>
+              {sortedBusinesses.length ? (
+                sortedBusinesses.map((b) => (
+                  <div key={b.id} className="mb-4">
+                    <BusinessCard business={b} />
+                  </div>
+                ))
+              ) : (
+                <p className="text-muted">No businesses found.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </Layout>
+    </>
   );
 };
 

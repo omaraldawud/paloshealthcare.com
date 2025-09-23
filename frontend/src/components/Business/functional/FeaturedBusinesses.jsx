@@ -12,7 +12,7 @@ const FeaturedBusinesses = () => {
       <h2 className="mb-4 fw-bold text-center">Featured Businesses</h2>
       <div className="row g-4">
         {featured.map((business) => (
-          <div className="col-md-4" key={business.id}>
+          <div className="col-md-12" key={business.id}>
             <BusinessCard business={business} />
           </div>
         ))}

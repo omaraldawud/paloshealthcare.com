@@ -1,4 +1,3 @@
-// src/components/business/BusinessCard.jsx
 import React from "react";
 
 const BusinessCard = ({ business }) => {
@@ -7,7 +6,7 @@ const BusinessCard = ({ business }) => {
     const hasHalfStar = rating % 1 !== 0;
 
     return (
-      <div className="d-flex align-items-center mb-1">
+      <div className="d-flex align-items-center mb-2">
         {[...Array(5)].map((_, i) => (
           <i
             key={i}
@@ -26,122 +25,137 @@ const BusinessCard = ({ business }) => {
   };
 
   return (
-    <div className="card h-100 shadow-sm border rounded-5 hover-shadow transition-all">
-      <div className="row g-0">
-        {/* Left image */}
-        <div className="col-md-4 d-flex align-items-center">
-          <img
-            src={business.image}
-            alt={business.name}
-            className="img-fluid rounded-start-5 p-2"
-            style={{ objectFit: "contain", maxHeight: "200px", width: "100%" }}
-          />
-        </div>
-
-        {/* Right content */}
-        <div className="col-md-8">
-          <div className="card-body d-flex flex-column h-100 p-3">
-            {/* Top badges */}
-            <div className="d-flex gap-2 flex-wrap mb-2">
-              <span className="badge bg-primary bg-opacity-90 text-white px-2 py-1">
-                {business.type}
-              </span>
-
-              {business.isSponsored && (
-                <span className="badge bg-warning text-dark px-2 py-1">
-                  Sponsored
+    <div className="card h-100 shadow-sm border-0 rounded-4 hover-shadow">
+      <div className="row g-0 h-100">
+        {/* Left content - 8 columns */}
+        <div className="col-md-8 d-flex flex-column">
+          <div className="card-body d-flex flex-column h-100 p-4">
+            {/* Header with badges */}
+            <div className="d-flex justify-content-between align-items-start mb-3">
+              <div className="d-flex flex-wrap gap-2">
+                <span className="badge bg-primary bg-opacity-90 text-white px-3 py-2">
+                  {business.type}
                 </span>
-              )}
+                {business.isSponsored && (
+                  <span className="badge bg-warning text-dark px-3 py-2">
+                    ⭐ Sponsored
+                  </span>
+                )}
+                {business.featured && (
+                  <span className="badge bg-success text-white px-3 py-2">
+                    Featured
+                  </span>
+                )}
+              </div>
 
-              {business.featured && (
-                <span className="badge bg-success text-white px-2 py-1">
-                  Featured
-                </span>
-              )}
+              {/* Action buttons */}
+              <div className="d-flex gap-2">
+                {business.website && (
+                  <a
+                    href={business.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-outline-primary btn-sm"
+                    title="Visit website"
+                  >
+                    <i className="bi bi-globe"></i>
+                  </a>
+                )}
+                {business.phone && (
+                  <a
+                    href={`tel:${business.phone}`}
+                    className="btn btn-outline-primary btn-sm"
+                  >
+                    <i className="bi bi-telephone"></i>
+                  </a>
+                )}
+              </div>
             </div>
 
-            {/* Descriptions */}
-            <div className="mb-2">
+            {/* Business name and rating */}
+            <h4 className="card-title fw-bold text-dark mb-2">
+              {business.name}
+            </h4>
+            {renderRatingStars(business.rating)}
+
+            {/* Sponsored/Featured descriptions */}
+            <div className="mb-3">
               {business.isSponsored && business.sponsoredDescription && (
-                <p className="mb-1 small text-muted">
+                <p className="text-muted small mb-2 fst-italic">
                   {business.sponsoredDescription}
                 </p>
               )}
               {business.featured && business.featuredDescription && (
-                <p className="mb-1 small text-muted">
+                <p className="text-muted small mb-2 fst-italic">
                   {business.featuredDescription}
                 </p>
               )}
             </div>
 
-            {/* Title and rating */}
-            <h5 className="card-title mb-1 text-dark fw-bold">
-              {business.name}
-            </h5>
-            {renderRatingStars(business.rating)}
-
             {/* Specialties */}
-            <div className="mb-2 mt-2">
-              <div className="d-flex flex-wrap gap-1">
-                {business.specialties.map((specialty, index) => (
+            <div className="mb-3">
+              <h6 className="fw-semibold mb-2">Specialties:</h6>
+              <div className="d-flex flex-wrap gap-2">
+                {business.specialties.map((spec, i) => (
                   <span
-                    key={index}
-                    className="badge bg-light text-dark border px-2 py-1 small"
+                    key={i}
+                    className="badge bg-light text-dark border px-3 py-2"
                   >
-                    {specialty}
+                    {spec}
                   </span>
                 ))}
               </div>
             </div>
 
             {/* Contact info */}
-            <div className="mb-3 mt-auto">
-              <div className="d-flex align-items-center mb-1 small text-muted">
-                <i className="bi bi-geo-alt me-2 text-primary"></i>
-                <span>{business.address}</span>
-              </div>
-              <div className="d-flex align-items-center mb-1 small text-muted">
-                <i className="bi bi-clock me-2 text-primary"></i>
-                <span>{business.hours}</span>
-              </div>
-              {business.phone && (
-                <div className="d-flex align-items-center mb-1 small text-muted">
-                  <i className="bi bi-telephone me-2 text-primary"></i>
-                  <span>{business.phone}</span>
+            <div className="mt-auto">
+              <div className="row g-2 text-muted small">
+                <div className="col-12 d-flex align-items-center">
+                  <i className="bi bi-geo-alt text-primary me-2"></i>
+                  <span>{business.address}</span>
                 </div>
-              )}
+                <div className="col-12 d-flex align-items-center">
+                  <i className="bi bi-clock text-primary me-2"></i>
+                  <span>{business.hours}</span>
+                </div>
+                {business.phone && (
+                  <div className="col-12 d-flex align-items-center">
+                    <i className="bi bi-telephone text-primary me-2"></i>
+                    <span>{business.phone}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right image - 4 columns */}
+        <div className="col-md-4 bg-light rounded-end-4">
+          <div className="d-flex flex-column align-items-center justify-content-center h-100 p-4">
+            {/* Image */}
+            <div className="mb-4 text-center">
+              <img
+                src={business.image}
+                alt={business.name}
+                className="img-fluid rounded-3 shadow-sm"
+                style={{
+                  maxHeight: "180px",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              />
             </div>
 
-            {/* Action buttons */}
-            <div className="mt-auto d-flex gap-2">
-              <a
-                href={business.website}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline-primary btn-sm d-flex align-items-center justify-content-center"
-                title="Contact This Business"
-                style={{ width: "44px" }}
-              >
-                <i className="bi bi-globe"></i>
-              </a>
-              {business.phone && (
-                <a
-                  href={`tel:${business.phone}`}
-                  className="btn btn-outline-primary btn-sm d-flex align-items-center justify-content-center"
-                  style={{ width: "44px" }}
-                >
-                  <i className="bi bi-telephone"></i>
-                </a>
-              )}
-              {business.email && (
-                <a
-                  href={`mailto:${business.email}`}
-                  className="btn btn-outline-primary btn-sm d-flex align-items-center justify-content-center"
-                  style={{ width: "44px" }}
-                >
-                  <i className="bi bi-envelope"></i>
-                </a>
-              )}
+            {/* CTA Button */}
+            <button className="btn btn-warning btn-lg fw-bold w-100 py-2 rounded-3">
+              Claim Your Listing
+            </button>
+
+            {/* Additional info */}
+            <div className="text-center mt-3">
+              <small className="text-muted">
+                Free listing • Increase visibility • Get more patients
+              </small>
             </div>
           </div>
         </div>

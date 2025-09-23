@@ -21,6 +21,7 @@ import heroIMGmedical from "../assets/images/local-medical-business.jpg";
 import heroIMGmedical2 from "../assets/images/medical-femal-doctor.jpg";
 
 import FeaturedBusinesses from "../components/Business/functional/FeaturedBusinesses";
+import BusinessListingSideBar from "../components/Business/functional/BusinessListingSideBar";
 
 //
 export default function Home() {
@@ -32,16 +33,16 @@ export default function Home() {
         <BreadcrumbSchema items={breadcrumbConfig.home} />
         <FAQSchema questions={faqConfig.home} />
         <ServiceSchema services={serviceConfig.home} />
-      </div>
-      <Layout>
+      </div>{" "}
+      <HeroInfoBox
+        title="Find & Manage Your Free Medical Listing"
+        heroIMG={heroIMGmedical2}
+        subtitle="Keep your practice visible and trusted online."
+        desc="Update your business details, showcase your services, and ensure patients can easily find, trust, and connect with your practice."
+        cta_text="Claim Your Free Listing Today"
+      />
+      <Layout sidebar={<BusinessListingSideBar />}>
         {/* DIV1 - Hero Info */}
-        <HeroInfoBox
-          title="Find & Manage Your Free Medical Listing"
-          heroIMG={heroIMGmedical2}
-          subtitle="Keep your practice visible and trusted online."
-          desc="Update your business details, showcase your services, and ensure patients can easily find, trust, and connect with your practice."
-          cta_text="Claim Your Free Listing Today"
-        />
 
         <FeaturedBusinesses />
         <Features />
