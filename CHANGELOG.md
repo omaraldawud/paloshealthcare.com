@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.0.0...v1.1.0) (2025-09-23)
+
+
+### Features
+
+* Ci/CD Steps 2 - FTP to site/dist. ([f713fdc](https://github.com/omaraldawud/paloshealthcare.com/commit/f713fdc48073dc6ac617240447693942a42f8ee6))
+
 # 1.0.0 (2025-09-23)
 
 
