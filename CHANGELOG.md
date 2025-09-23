@@ -12,6 +12,13 @@
 
 * Ci/CD Steps 2 - FTP to site/dist. -3- ([c17a48e](https://github.com/omaraldawud/paloshealthcare.com/commit/c17a48e08413565afde7ac3efd5e6a3fc3aa99cd))
 
+# [1.3.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.2.0...v1.3.0) (2025-09-23)
+
+
+### Features
+
+* Ci/CD Steps 2 - FTP to site/dist. -3- ([c17a48e](https://github.com/omaraldawud/paloshealthcare.com/commit/c17a48e08413565afde7ac3efd5e6a3fc3aa99cd))
+
 # [1.2.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.1.0...v1.2.0) (2025-09-23)
 
 
