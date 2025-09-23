@@ -14,7 +14,7 @@ const BusinessListingSideBar = () => {
         positionText="Limited Spot"
         title="Featured Business Spotlight"
         description="Top position • Maximum visibility • Premium branding"
-        price={299}
+        price={199}
         note="minimum 1-year commitment"
         borderColor="warning"
         bgColor="bg-gradient-to-right text-white"
@@ -28,7 +28,7 @@ const BusinessListingSideBar = () => {
         positionText="#2 Position"
         title="Sponsored Listing"
         description="Enhanced visibility • Priority placement"
-        price={199}
+        price={169}
         note="monthly billing available"
         borderColor="primary"
         bgColor="bg-primary bg-opacity-10"
