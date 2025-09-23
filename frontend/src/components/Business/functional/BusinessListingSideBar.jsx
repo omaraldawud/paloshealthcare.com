@@ -29,7 +29,7 @@ const BusinessListingSideBar = () => {
         title="Sponsored Listing"
         description="Enhanced visibility • Priority placement"
         price={169}
-        note="monthly billing available"
+        note="billed yearly"
         borderColor="primary"
         bgColor="bg-primary bg-opacity-10"
       />
