@@ -235,6 +235,22 @@
   "featuredDescription": "Trusted cardiology specialists serving the community with compassionate care.",
   "image": "/images/businesses/heartcare-cardiology-logo.webp",
   "website": "https://www.heartcarecardiology.com"
+},
+{
+  "id": 18,
+  "name": "Primary Care for All",
+  "type": "cardio",
+  "featured": false,
+  "isSponsored": true,
+  "specialties": ["Preventive Care"],
+  "address": "789 Main Street, Oak Brook, IL 60523",
+  "hours": "Mon-Fri 8:00am - 4:30pm",
+  "phone": "+1 (630) 555-8790",
+  "rating": 4.6,
+  "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
+  "featuredDescription": "Trusted cardiology specialists serving the community with compassionate care.",
+  "image": "/images/businesses/heartcare-cardiology-logo.webp",
+  "website": "https://www.heartcarecardiology.com"
 }
 
 ]
