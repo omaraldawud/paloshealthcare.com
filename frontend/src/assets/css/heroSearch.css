@@ -1,0 +1,69 @@
+.hero-search {
+  /* margin-top: 11rem; */
+  text-align: center;
+}
+
+.hero-search .position-relative {
+  position: relative;
+  width: 100%;
+}
+
+.hero-search input.form-control {
+  height: 3.5rem; /* taller input */
+  padding-left: 3rem; /* space for icon */
+  font-size: 2rem;
+}
+
+.hero-search i.bi-search {
+  font-size: 1.3rem;
+  color: #6c757d;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-search .btn {
+  height: 3.5rem; /* match input height */
+}
+
+.hero-search .badge {
+  cursor: pointer;
+  margin: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-search .badge i {
+  margin-right: 0.3rem;
+}
+
+.badge-hover {
+  /* Your existing classes */
+  font-size: 1.2rem;
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+
+  /* Transition for smooth effect */
+  transition: all 0.3s ease;
+
+  /* Initial state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.badge-hover:hover {
+  /* Hover state */
+  background-color: #2a7cc7;
+  color: white;
+  border-color: #2a7cc7;
+  box-shadow: 0 4px 8px rgba(42, 124, 199, 0.2);
+  transform: translateY(-2px);
+  cursor: pointer;
+}

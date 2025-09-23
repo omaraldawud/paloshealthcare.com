@@ -1,0 +1,9 @@
+/* Ensure cards have same height */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  object-fit: cover;
+}

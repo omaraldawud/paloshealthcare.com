@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+  height: 100%; /* ensure full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column; /* stack sections vertically */
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  min-height: 100vh; /* full viewport height */
+  width: 100%;
+  text-align: center; /* center text inside sections */
+  box-sizing: border-box;
+  padding: 20px; /* optional spacing */
+}

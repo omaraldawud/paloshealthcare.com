@@ -1,0 +1,33 @@
+{
+  "categories": [
+  { "name": "Dentists", "icon": "bi bi-emoji-smile" },
+  { "name": "Cardiologists", "icon": "bi bi-heart-pulse" },
+  { "name": "Dermatologists", "icon": "bi bi-droplet" },
+  { "name": "Pediatricians", "icon": "bi bi-people" },
+  { "name": "Orthopedic Surgeons", "icon": "bi bi-bandaid" },
+  { "name": "Physiotherapists", "icon": "bi bi-person-bounding-box" },
+  { "name": "Psychiatrists", "icon": "bi bi-brain" },
+  { "name": "Psychologists", "icon": "bi bi-chat-dots" },
+  { "name": "Chiropractors", "icon": "bi bi-activity" },
+  { "name": "Oncologists", "icon": "bi bi-hospital" },
+  { "name": "Gynecologists", "icon": "bi bi-gender-female" },
+  { "name": "Urologists", "icon": "bi bi-droplet-half" },
+  { "name": "Neurologists", "icon": "bi bi-cpu" },
+  { "name": "ENT Specialists", "icon": "bi bi-ear" },
+  { "name": "Ophthalmologists", "icon": "bi bi-eye" },
+  { "name": "Optometrists", "icon": "bi bi-eyeglasses" },
+  { "name": "Allergists", "icon": "bi bi-cloud-drizzle" },
+  { "name": "Endocrinologists", "icon": "bi bi-droplet-fill" },
+  { "name": "Gastroenterologists", "icon": "bi bi-basket" },
+  { "name": "Nephrologists", "icon": "bi bi-droplet" },
+  { "name": "Pulmonologists", "icon": "bi bi-wind" },
+  { "name": "Rheumatologists", "icon": "bi bi-bone" },
+  { "name": "Infectious Disease", "icon": "bi bi-bug" },
+  { "name": "Emergency Medicine", "icon": "bi bi-hospital-fill" },
+  { "name": "Family Medicine", "icon": "bi bi-house-heart" },
+  { "name": "Internal Medicine", "icon": "bi bi-file-medical" },
+  { "name": "General Surgeons", "icon": "bi bi-scissors" },
+  { "name": "Plastic Surgeons", "icon": "bi bi-body-text" }
+]
+
+}
