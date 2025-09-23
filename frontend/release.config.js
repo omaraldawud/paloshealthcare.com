@@ -1,5 +1,5 @@
 module.exports = {
-  branches: ["main"], // or "master" if you use that
+  branches: ["main"],
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",

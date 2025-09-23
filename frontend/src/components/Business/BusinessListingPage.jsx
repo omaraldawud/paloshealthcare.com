@@ -19,7 +19,8 @@ import businesses from "./data/businesses.json";
 import heroIMGmedical2 from "../../assets/images/doctor-and-patient-primary-care.png";
 
 // util functions
-import { sortBusinesses } from "../../util/sortedBusinesses";
+import { sortBusinesses } from "../../utils/sortedBusinesses";
+import { getMedTypeIcon } from "../../utils/getMedTypeIcon";
 
 const BusinessListingPage = () => {
   const [filter, setFilter] = useState("all");
@@ -106,15 +107,18 @@ const BusinessListingPage = () => {
                 "clinic",
                 "hospital",
                 "urgentcare",
+                "primarycare",
                 "dentist",
+                "cardio",
               ].map((f) => (
                 <button
                   key={f}
-                  className={`btn btn-lg ${
+                  className={`btn btn-sm ${
                     filter === f ? "btn-warning" : "btn-outline-primary"
                   } rounded-pill px-4`}
                   onClick={() => setFilter(f)}
                 >
+                  <i className={`${getMedTypeIcon(f)} me-2`}></i>
                   {f.charAt(0).toUpperCase() + f.slice(1)}
                 </button>
               ))}

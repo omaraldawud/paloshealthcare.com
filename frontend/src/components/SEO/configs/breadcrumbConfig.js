@@ -8,4 +8,7 @@ export const breadcrumbConfig = {
     { name: "Home", url: "https://paloshealthcare.com" },
     { name: "Contact", url: "https://paloshealthcare.com/contact" },
   ],
+  "medical-businesses": [
+    { name: "Home", url: "https://paloshealthcare.com/medical-businesses" },
+  ],
 };

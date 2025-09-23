@@ -3,20 +3,19 @@
   "id": 101,
   "name": "Palos Healthcare Center",
   "type": "clinic",
+    "featured": true,
+  "isSponsored": true,
   "specialties": ["Cardiology", "Primary Care", "Urgent Care"],
   "address": "10378 S. Harlem Ave, Palos Hills, IL 60465",
-  "hours": "Mon-Fri 8:00 AM - 6:00 PM, Sat 9:00 AM - 2:00 PM",
+  "hours": "Mon-Fri 8:00am - 6:00pm, Sat 9:00am - 2:00pm",
   "phone": "+1 (708) 529-7109",
   "rating": 4.7,
-  "featured": true,
-  "isSponsored": true,
+
   "sponsoredDescription": "Sponsored Listing: Learn more about our special programs and services.",
   "featuredDescription": "Featured Listing: Trusted clinic providing comprehensive care in your area.",
   "image": "/images/businesses/paloshealthcarecenter-logo.webp",
   "website": "https://www.paloshealthcarecenter.com"
 },
-
-
   {
     "id": 2,
     "name": "Greenwood Hospital",
@@ -34,7 +33,7 @@
   {
     "id": 3,
     "name": "Downtown Urgent Care",
-    "type": "Urgent Care",
+    "type": "Urgentcare",
     "specialties": ["Minor Injuries", "Flu & Cold", "X-Ray"],
     "address": "789 Pine St, Chicago, IL",
     "phone": "(312) 555-9012",
@@ -112,7 +111,7 @@
     "id": 8,
     "name": "Westside Urgent Care",
     "featured": true,
-    "type": "Urgent Care",
+    "type": "Urgentcare",
     "specialties": ["Flu & Cold", "Lab Testing", "X-Ray"],
     "address": "321 West St, Chicago, IL",
     "phone": "(312) 555-4321",
@@ -148,7 +147,7 @@
   {
     "id": 11,
     "name": "Southside Urgent Care",
-    "type": "Urgent Care",
+    "type": "Urgentcare",
     "specialties": ["Minor Injuries", "Flu Shots", "X-Ray"],
     "address": "789 South St, Chicago, IL",
     "phone": "(312) 555-2109",
@@ -184,7 +183,7 @@
   {
     "id": 14,
     "name": "Family First Urgent Care",
-    "type": "Urgent Care",
+    "type": "Primarycare",
     "specialties": ["Flu & Cold", "Lab Testing", "Minor Injuries"],
     "address": "123 Family St, Chicago, IL",
     "phone": "(312) 555-3210",
@@ -204,5 +203,38 @@
     "rating": 4.7,
     "hours": "Mon-Fri 9am-5pm",
     "image": "/images/businesses/sunrise.jfif"
-  }
+  },
+  {
+  "id": 16,
+  "name": "Bright Smile Dental",
+  "type": "dentist",
+  "featured": true,
+  "isSponsored": false,
+  "specialties": ["Cosmetic Dentistry", "Orthodontics", "Pediatric Dentistry"],
+  "address": "456 Oak Street, Naperville, IL 60540",
+  "hours": "Mon-Fri 9:00am - 5:00pm, Sat 8:00am - 1:00pm",
+  "phone": "+1 (630) 555-2143",
+  "rating": 4.8,
+  "sponsoredDescription": "Sponsored Listing: Learn more about our patient-friendly dental plans.",
+  "featuredDescription": "Featured Listing: Modern dental care with a focus on comfort and quality.",
+  "image": "/images/businesses/brightsmile-dental-logo.webp",
+  "website": "https://www.brightsmiledental.com"
+},
+{
+  "id": 17,
+  "name": "HeartCare Cardiology Group",
+  "type": "cardio",
+  "featured": false,
+  "isSponsored": true,
+  "specialties": ["Cardiology", "Heart Health", "Preventive Care"],
+  "address": "789 Main Street, Oak Brook, IL 60523",
+  "hours": "Mon-Fri 8:00am - 4:30pm",
+  "phone": "+1 (630) 555-8790",
+  "rating": 4.6,
+  "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
+  "featuredDescription": "Trusted cardiology specialists serving the community with compassionate care.",
+  "image": "/images/businesses/heartcare-cardiology-logo.webp",
+  "website": "https://www.heartcarecardiology.com"
+}
+
 ]

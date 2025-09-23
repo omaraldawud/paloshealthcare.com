@@ -7,3 +7,20 @@
 .card-img-top {
   object-fit: cover;
 }
+
+.glass-morphism {
+  background: rgba(244, 243, 248, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-gradient-to-right {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Optional hover effects */
+.bg-gradient-to-right:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

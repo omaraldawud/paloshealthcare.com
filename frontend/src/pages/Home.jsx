@@ -45,9 +45,9 @@ export default function Home() {
         {/* DIV1 - Hero Info */}
 
         <FeaturedBusinesses />
-        <Features />
-        <NotifyForm />
       </Layout>
+      <Features />
+      <NotifyForm />
     </>
   );
 }
