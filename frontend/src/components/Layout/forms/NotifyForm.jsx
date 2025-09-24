@@ -55,17 +55,27 @@ export default function NotifyForm({ form_location = "page" }) {
     <>
       {form_location === "page" && <h2>Get Notified When We Launch</h2>}
       <form
-        className={`d-flex ${isTopbar ? "w-100" : "w-auto"}`}
+        className="d-flex" /*</>{`d-flex ${isTopbar ? "w-100" : "w-auto"}`} */
         style={isTopbar ? { maxWidth: "500px" } : {}}
       >
         <input
           type="email"
-          className="form-control me-2"
+          className="d-flex w-100 p-2" // ✅ className={`form-control me-2 ${isTopbar ? "" : "w-auto"}`} only auto width on page
+          style={{
+            ...(!isTopbar ? { minWidth: "250px" } : {}),
+            borderRadius: "10px", // fully rounded
+            border: "1px solid #ccc", // subtle border
+            boxShadow: "0 2px 6px rgba(0,0,0,0.1)", // soft shadow
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            fontSize: "1rem",
+            marginRight: "1rem",
+          }}
           placeholder={
             isTopbar ? "Get Notified When We Launch" : "Enter your email"
           }
         />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-danger">
           Notify
         </button>
       </form>

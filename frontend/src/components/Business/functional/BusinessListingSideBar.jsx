@@ -1,11 +1,13 @@
 //
 
 // Your main component
+import Divider from "../../UI/Divider";
 import MarketingSidebarCard from "../cards/MarketingSidebarCard";
 
 const BusinessListingSideBar = () => {
   return (
     <div className="sticky-top" style={{ top: "100px" }}>
+      <Divider />
       {/* Premium Featured Spot */}
       <MarketingSidebarCard
         badgeText="Premium"

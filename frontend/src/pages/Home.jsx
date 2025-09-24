@@ -23,6 +23,7 @@ import heroIMGmedical2 from "../assets/images/medical-femal-doctor.jpg";
 import FeaturedBusinesses from "../components/Business/functional/FeaturedBusinesses";
 import BusinessListingSideBar from "../components/Business/functional/BusinessListingSideBar";
 import Footer from "../components/Layout/Footer";
+import Divider from "../components/UI/Divider";
 //
 export default function Home() {
   return (
@@ -46,10 +47,24 @@ export default function Home() {
 
         <FeaturedBusinesses />
       </Layout>
+      <hr
+        className="mx-auto my-4" // centers horizontally and adds vertical spacing
+        style={{
+          width: "50%", // half the container width
+          borderTop: "4px solid #007bff", // thickness and color
+          borderRadius: "2px", // slightly rounded edges
+        }}
+      />
       <Features />
-      <section className="notify" id="notify">
-        <NotifyForm />
-      </section>
+      <Divider />
+      <div
+        className="d-flex features justify-content-center bg-white"
+        id="features"
+      >
+        <div className=" pt-2 px-3 rounded-4 ">
+          <NotifyForm form_location="page" />
+        </div>
+      </div>
       <Footer />
     </>
   );

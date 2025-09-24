@@ -4,7 +4,7 @@
 //
 
 //
-import React from "react";
+import "../../assets/css/footer.css";
 
 export default function Footer() {
   return (
@@ -22,15 +22,15 @@ export default function Footer() {
           </div>
           <div className="footer-section">
             <h4>Follow Us</h4>
-            <div className="social-links">
-              <a href="#facebook">
-                <i className="fab fa-facebook"></i>
+            <div className="d-flex gap-3">
+              <a href="#facebook" className="text-dark fs-4">
+                <i className="bi bi-facebook"></i>
               </a>
-              <a href="#twitter">
-                <i className="fab fa-twitter"></i>
+              <a href="#twitter" className="text-dark fs-4">
+                <i className="bi bi-twitter"></i>
               </a>
-              <a href="#linkedin">
-                <i className="fab fa-linkedin"></i>
+              <a href="#linkedin" className="text-dark fs-4">
+                <i className="bi bi-linkedin"></i>
               </a>
             </div>
           </div>

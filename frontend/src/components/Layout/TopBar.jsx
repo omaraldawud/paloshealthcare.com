@@ -24,7 +24,10 @@ const TopBar = () => {
 
       {/* Form justified */}
       <div className="flex-grow-1 d-flex justify-content-end">
-        <div className="pt-2 px-3 rounded-4 ">
+        <div
+          className="pt-2 px-3 rounded-4"
+          style={{ maxWidth: "500px", width: "100%" }}
+        >
           <NotifyForm form_location="topbar" />
         </div>
       </div>
