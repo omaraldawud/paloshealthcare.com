@@ -1,7 +1,6 @@
 // src/Layout/Layout.jsx
 import React from "react";
 import Header from "./Header";
-import Footer from "./Footer";
 
 export default function Layout({ children, sidebar }) {
   return (
@@ -16,7 +15,6 @@ export default function Layout({ children, sidebar }) {
           {sidebar && <div className="col-lg-4">{sidebar}</div>}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -22,7 +22,7 @@ import heroIMGmedical2 from "../assets/images/medical-femal-doctor.jpg";
 
 import FeaturedBusinesses from "../components/Business/functional/FeaturedBusinesses";
 import BusinessListingSideBar from "../components/Business/functional/BusinessListingSideBar";
-
+import Footer from "../components/Layout/Footer";
 //
 export default function Home() {
   return (
@@ -47,7 +47,10 @@ export default function Home() {
         <FeaturedBusinesses />
       </Layout>
       <Features />
-      <NotifyForm />
+      <section className="notify" id="notify">
+        <NotifyForm />
+      </section>
+      <Footer />
     </>
   );
 }

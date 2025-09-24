@@ -1,0 +1,8 @@
+info@paloshealthcare.com
+
+FTP
+	FTP Username: palosdirectory@paloshealthcare.com
+	FTP_SERVER: ftp.hostitwise.net
+	FTP & explicit FTPS port:  21
+	FTP_USERNAME: palosdirectory@paloshealthcare.com
+	FTP_PASSWORD: Palos843312@2025

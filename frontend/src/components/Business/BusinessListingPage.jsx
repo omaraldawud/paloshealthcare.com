@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../Layout/Layout";
+import Footer from "../Layout/Footer";
+
 //JASON-LT Metas
 import {
   SEOMeta,
@@ -145,6 +147,7 @@ const BusinessListingPage = () => {
           </div>
         </div>
       </Layout>
+      <Footer />
     </>
   );
 };

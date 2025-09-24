@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function NotifyForm() {
+export default function NotifyForm({ form_location = "page" }) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
@@ -46,55 +46,29 @@ export default function NotifyForm() {
     }
   }, [toastMessage]);
 
-  return (
-    <section className="notify" id="notify">
-      <div className="container">
-        <h2>Get Notified When We Launch</h2>
-        <form onSubmit={handleSubmit} className="notify-form">
-          <div className="form-group d-flex mb-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-              className="form-control me-2"
-              disabled={loading}
-            />
-            <button
-              type="submit"
-              className="btn btn-primary"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Notify Me"}
-            </button>
-          </div>
-        </form>
+  const isTopbar = form_location === "topbar";
+  const inputPlaceHolder = isTopbar
+    ? "Get Notified When We Launch"
+    : "Enter your email";
 
-        {/* Toast container */}
-        <div
-          className="position-fixed top-0 end-0 p-3"
-          style={{ zIndex: 9999 }}
-        >
-          {toastMessage && (
-            <div
-              className={`toast align-items-center text-white ${
-                toastType === "success" ? "bg-success" : "bg-danger"
-              } show`}
-              role="alert"
-            >
-              <div className="d-flex">
-                <div className="toast-body">{toastMessage}</div>
-                <button
-                  type="button"
-                  className="btn-close btn-close-white me-2 m-auto"
-                  onClick={() => setToastMessage("")}
-                ></button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+  return (
+    <>
+      {form_location === "page" && <h2>Get Notified When We Launch</h2>}
+      <form
+        className={`d-flex ${isTopbar ? "w-100" : "w-auto"}`}
+        style={isTopbar ? { maxWidth: "500px" } : {}}
+      >
+        <input
+          type="email"
+          className="form-control me-2"
+          placeholder={
+            isTopbar ? "Get Notified When We Launch" : "Enter your email"
+          }
+        />
+        <button type="submit" className="btn btn-primary">
+          Notify
+        </button>
+      </form>
+    </>
   );
 }
