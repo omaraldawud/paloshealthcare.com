@@ -6,7 +6,7 @@ router.post("/by-businesses", async (req, res) => {
   try {
     const { businessIds } = req.body; // array of ObjectId strings
     if (!businessIds || !businessIds.length) {
-      return res.status(400).json({ message: "No business IDs provided" });
+      return res.status(400).json({ message: "No business IDs provided ..." });
     }
 
     const reviews = await Review.find({ businessId: { $in: businessIds } })
