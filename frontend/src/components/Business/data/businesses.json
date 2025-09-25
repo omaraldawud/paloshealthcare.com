@@ -1,21 +1,27 @@
 [
 {
-  "id": 101,
-  "name": "Palos Healthcare Center",
-  "type": "clinic",
+    "id": 1,
+    "name": "Palos Healthcare Center",
+    "type": "clinic",
     "featured": true,
-  "isSponsored": true,
-  "specialties": ["Cardiology", "Primary Care", "Urgent Care"],
-  "address": "10378 S. Harlem Ave, Palos Hills, IL 60465",
-  "hours": "Mon-Fri 8:00am - 6:00pm, Sat 9:00am - 2:00pm",
-  "phone": "+1 (708) 529-7109",
-  "rating": 4.7,
-
-  "sponsoredDescription": "Sponsored Listing: Learn more about our special programs and services.",
-  "featuredDescription": "Featured Listing: Trusted clinic providing comprehensive care in your area.",
-  "image": "/images/businesses/paloshealthcarecenter-logo.webp",
-  "website": "https://www.paloshealthcarecenter.com"
-},
+    "isSponsored": true,
+    "specialties": ["Cardiology", "Primary Care", "Urgent Care"],
+    "address": "10378 S. Harlem Ave, Palos Hills, IL 60465",
+    "hours": [
+      { "day": "Mon", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Tue", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Wed", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Thu", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Fri", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Sat", "open": "9:00am", "close": "2:00pm" }
+    ],
+    "phone": "+1 (708) 529-7109",
+    "rating": 4.7,
+    "sponsoredDescription": "Sponsored Listing: Learn more about our special programs and services.",
+    "featuredDescription": "Featured Listing: Trusted clinic providing comprehensive care in your area.",
+    "image": "/images/businesses/paloshealthcarecenter-logo.webp",
+    "website": "https://www.paloshealthcarecenter.com"
+  },
   {
     "id": 2,
     "name": "Greenwood Hospital",
@@ -24,10 +30,18 @@
     "isSponsored": true,
     "specialties": ["Cardiology", "Emergency"],
     "address": "456 Oak Ave, Chicago, IL",
+    "hours": [
+      { "day": "Mon", "open": "00:00", "close": "23:59" },
+      { "day": "Tue", "open": "00:00", "close": "23:59" },
+      { "day": "Wed", "open": "00:00", "close": "23:59" },
+      { "day": "Thu", "open": "00:00", "close": "23:59" },
+      { "day": "Fri", "open": "00:00", "close": "23:59" },
+      { "day": "Sat", "open": "00:00", "close": "23:59" },
+      { "day": "Sun", "open": "00:00", "close": "23:59" }
+    ],
     "phone": "(312) 555-5678",
     "website": "https://greenwoodhospital.com",
     "rating": 4.7,
-    "hours": "Open 24/7",
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -36,14 +50,22 @@
     "type": "Urgentcare",
     "specialties": ["Minor Injuries", "Flu & Cold", "X-Ray"],
     "address": "789 Pine St, Chicago, IL",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }
+    ],
     "phone": "(312) 555-9012",
     "website": "https://downtownurgentcare.com",
     "rating": 4.3,
-    "hours": "Mon-Sun 8am-10pm",
     "image": "/images/businesses/sunrise.jfif"
   },
     {
-    "id": 1,
+    "id": 4,
     "name": "Sunrise Clinic",
     "featured": true,
     "isSponsored": true,
@@ -53,11 +75,18 @@
     "phone": "(312) 555-1234",
     "website": "https://sunriseclinic.com",
     "rating": 4.5,
-    "hours": "Mon-Fri 8am-5pm",
+        "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Lakeside Pediatric Clinic",
     "type": "Clinic",
     "specialties": ["Pediatrics", "Immunizations", "Well Child Visits"],
@@ -65,23 +94,17 @@
     "phone": "(312) 555-3456",
     "website": "https://lakesidepediatrics.com",
     "rating": 4.8,
-    "hours": "Mon-Fri 9am-6pm",
+        "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"    
   },
-  {
-    "id": 5,
-    "name": "Metro Heart Hospital",
-        "isSponsored": true,
 
-    "type": "Hospital",
-    "specialties": ["Cardiology", "Heart Surgery", "Emergency"],
-    "address": "654 Elm St, Chicago, IL",
-    "phone": "(312) 555-7890",
-    "website": "https://metrohearthospital.com",
-    "rating": 4.9,
-    "hours": "Open 24/7",
-    "image": "/images/businesses/sunrise.jfif"
-  },
   {
     "id": 6,
     "name": "Northside Clinic",
@@ -92,7 +115,14 @@
     "phone": "(312) 555-2345",
     "website": "https://northsideclinic.com",
     "rating": 4.4,
-    "hours": "Mon-Fri 8am-6pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -104,7 +134,14 @@
     "phone": "(312) 555-6789",
     "website": "https://citygeneralhospital.com",
     "rating": 4.6,
-    "hours": "Open 24/7",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -117,7 +154,14 @@
     "phone": "(312) 555-4321",
     "website": "https://westsideurgentcare.com",
     "rating": 4.2,
-    "hours": "Mon-Sun 8am-10pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -129,7 +173,14 @@
     "phone": "(312) 555-8765",
     "website": "https://brighthealthclinic.com",
     "rating": 4.5,
-    "hours": "Mon-Fri 9am-5pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -141,7 +192,14 @@
     "phone": "(312) 555-6543",
     "website": "https://lakeshorehospital.com",
     "rating": 4.7,
-    "hours": "Open 24/7",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -153,7 +211,14 @@
     "phone": "(312) 555-2109",
     "website": "https://southsideurgentcare.com",
     "rating": 4.3,
-    "hours": "Mon-Sun 8am-10pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -165,7 +230,14 @@
     "phone": "(312) 555-5432",
     "website": "https://harmonyclinic.com",
     "rating": 4.6,
-    "hours": "Mon-Fri 8am-6pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -177,7 +249,14 @@
     "phone": "(312) 555-9876",
     "website": "https://centralhospital.com",
     "rating": 4.8,
-    "hours": "Open 24/7",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -189,7 +268,14 @@
     "phone": "(312) 555-3210",
     "website": "https://familyfirsturgentcare.com",
     "rating": 4.4,
-    "hours": "Mon-Sun 8am-10pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -201,7 +287,14 @@
     "phone": "(312) 555-6547",
     "website": "https://northstarclinic.com",
     "rating": 4.7,
-    "hours": "Mon-Fri 9am-5pm",
+    "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
     "image": "/images/businesses/sunrise.jfif"
   },
   {
@@ -212,7 +305,14 @@
   "isSponsored": false,
   "specialties": ["Cosmetic Dentistry", "Orthodontics", "Pediatric Dentistry"],
   "address": "456 Oak Street, Naperville, IL 60540",
-  "hours": "Mon-Fri 9:00am - 5:00pm, Sat 8:00am - 1:00pm",
+  "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
   "phone": "+1 (630) 555-2143",
   "rating": 4.8,
   "sponsoredDescription": "Sponsored Listing: Learn more about our patient-friendly dental plans.",
@@ -228,7 +328,14 @@
   "isSponsored": true,
   "specialties": ["Cardiology", "Heart Health", "Preventive Care"],
   "address": "789 Main Street, Oak Brook, IL 60523",
-  "hours": "Mon-Fri 8:00am - 4:30pm",
+  "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
   "phone": "+1 (630) 555-8790",
   "rating": 4.6,
   "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
@@ -244,7 +351,14 @@
   "isSponsored": true,
   "specialties": ["Preventive Care"],
   "address": "789 Main Street, Oak Brook, IL 60523",
-  "hours": "Mon-Fri 8:00am - 4:30pm",
+  "hours": [
+      { "day": "Mon", "open": "8:00", "close": "22:00" },
+      { "day": "Tue", "open": "8:00", "close": "22:00" },
+      { "day": "Wed", "open": "8:00", "close": "22:00" },
+      { "day": "Thu", "open": "8:00", "close": "22:00" },
+      { "day": "Fri", "open": "8:00", "close": "22:00" },
+      { "day": "Sat", "open": "8:00", "close": "22:00" },
+      { "day": "Sun", "open": "8:00", "close": "22:00" }],
   "phone": "+1 (630) 555-8790",
   "rating": 4.6,
   "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
@@ -252,5 +366,4 @@
   "image": "/images/businesses/heartcare-cardiology-logo.webp",
   "website": "https://www.heartcarecardiology.com"
 }
-
 ]

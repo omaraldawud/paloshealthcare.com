@@ -101,12 +101,19 @@ const BusinessCard = ({ business }) => {
                 <div className="col-12">
                   <i className="bi bi-geo-alt text-primary me-2"></i>
                   <span className="fw-bolder">{business.address}</span>
+                  <i className="bi bi-telephone text-primary ms-4 me-2"></i>
+                  <span className="fw-bolder me-3">{business.phone}</span>
                 </div>
                 <div className="col-12">
-                  <i className="bi bi-telephone text-primary me-2"></i>
-                  <span className="fw-bolder me-3">{business.phone}</span>
                   <i className="bi bi-clock  text-primary me-2"></i>
-                  <span className="fw-bolder">{business.hours}</span>
+                  <span className="fw-italic small">
+                    {business.hours.map((h, idx) => (
+                      <span key={idx}>
+                        {h.day}: {h.open} - {h.close}
+                        {idx < business.hours.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </span>
                 </div>
               </div>
             </div>
