@@ -26,4 +26,21 @@ router.get("/featured", async (req, res) => {
   }
 });
 
+// GET /api/businesses/search?query=...
+router.get("/search", async (req, res) => {
+  const { query } = req.query;
+  if (!query) return res.json([]);
+
+  try {
+    const results = await Business.find(
+      { $text: { $search: query } },
+      { score: { $meta: "textScore" } }
+    ).sort({ score: { $meta: "textScore" } });
+
+    res.json(results);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;

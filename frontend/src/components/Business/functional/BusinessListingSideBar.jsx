@@ -2,7 +2,7 @@
 
 // Your main component
 import Divider from "../../UI/Divider";
-import MarketingSidebarCard from "../cards/MarketingSidebarCard";
+import MarketingSidebarCard from "../../UI/MarketingSidebarCard";
 
 const BusinessListingSideBar = () => {
   return (

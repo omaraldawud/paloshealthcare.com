@@ -67,9 +67,3 @@
   transform: translateY(-2px);
   cursor: pointer;
 }
-
-.dropdown-menu.show {
-  top: auto !important;
-  bottom: 100%;
-  margin-bottom: 0.25rem; /* spacing above button */
-}

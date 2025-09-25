@@ -32,8 +32,6 @@ const BusinessCard = ({ business, reviews = [] }) => {
         {/* Left Container - 75% width */}
         <div className="col-md-9 d-flex flex-column">
           <div className="card-body d-flex flex-column h-100 p-4">
-            {/* Header with action buttons in top-right corner */}
-
             {/* Row 1: Business name and rating */}
             <div className="mb-3">
               <div className="d-flex justify-content-between align-items-start">
