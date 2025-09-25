@@ -9,7 +9,9 @@ const FeaturedBusinesses = () => {
 
   useEffect(() => {
     if (useMongo) {
-      fetch("http://localhost:5000/api/businesses?featured=true")
+      fetch(
+        "https://paloshealthcarecom-production.up.railway.app/api/businesses?featured=true"
+      )
         .then((res) => res.json())
         .then(async (data) => {
           setFeatured(data);
@@ -17,7 +19,7 @@ const FeaturedBusinesses = () => {
           const businessIds = data.map((b) => b._id);
           if (businessIds.length) {
             const res = await fetch(
-              "http://localhost:5000/api/reviews/by-businesses",
+              "https://paloshealthcarecom-production.up.railway.app/api/reviews/by-businesses",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

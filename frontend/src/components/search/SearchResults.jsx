@@ -20,45 +20,24 @@ const SearchResults = () => {
   const searchParams = new URLSearchParams(location.search);
   const query = searchParams.get("query");
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     if (!query) return;
-
     const fetchResults = async () => {
       setLoading(true);
       try {
-        // Fetch search results
         const res = await fetch(
-          `/api/businesses/search?query=${encodeURIComponent(query)}`
+          `${API_BASE}/api/businesses/search?query=${encodeURIComponent(query)}`
         );
         const data = await res.json();
         setResults(data);
-
-        // Fetch reviews for these businesses
-        if (data.length > 0) {
-          const businessIds = data.map((b) => b._id);
-          const revRes = await fetch("/api/reviews/by-businesses", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ businessIds }),
-          });
-          const reviewsData = await revRes.json();
-
-          // Transform into { businessId: [reviews] }
-          const reviewMap = {};
-          reviewsData.forEach((r) => {
-            const id = r.businessId._id;
-            if (!reviewMap[id]) reviewMap[id] = [];
-            reviewMap[id].push(r);
-          });
-          setReviews(reviewMap);
-        }
       } catch (err) {
-        console.error("Error fetching search results or reviews:", err);
+        console.error("Error fetching search results:", err);
       } finally {
         setLoading(false);
       }
     };
-
     fetchResults();
   }, [query]);
 
