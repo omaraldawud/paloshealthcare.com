@@ -1,0 +1,177 @@
+{
+  "categories": [
+    {
+      "name": "Dentists",
+      "icon": "bi bi-emoji-smile",
+      "services": [
+        "Cosmetic Dentistry",
+        "Dental Implants",
+        "General Dentistry",
+        "Orthodontics",
+        "Pediatric Dentistry",
+        "Periodontics",
+        "Prosthodontics",
+        "Root Canals",
+        "Teeth Whitening",
+        "Tooth Extraction"
+      ]
+    },
+    {
+      "name": "Cardiologists",
+      "icon": "bi bi-heart-pulse",
+      "services": []
+    },
+    {
+      "name": "Dermatologists",
+      "icon": "bi bi-droplet",
+      "services": []
+    },
+    {
+      "name": "Pediatricians",
+      "icon": "bi bi-people",
+      "services": [
+        "Adolescent Medicine",
+        "Child Development",
+        "Immunizations",
+        "Newborn Care",
+        "Pediatric Cardiology",
+        "Pediatric Dermatology",
+        "Pediatric Endocrinology",
+        "Pediatric Gastroenterology",
+        "Pediatric Neurology",
+        "Pediatric Oncology"
+      ]
+    },
+    {
+      "name": "Orthopedic Surgeons",
+      "icon": "bi bi-bandaid",
+      "services": []
+    },
+    {
+      "name": "Physiotherapists",
+      "icon": "bi bi-person-bounding-box",
+      "services": []
+    },
+    {
+      "name": "Psychiatrists",
+      "icon": "bi bi-person-heart",
+      "services": []
+    },
+    {
+      "name": "Psychologists",
+      "icon": "bi bi-chat-dots",
+      "services": []
+    },
+    {
+      "name": "Chiropractors",
+      "icon": "bi bi-activity",
+      "services": []
+    },
+    {
+      "name": "Oncologists",
+      "icon": "bi bi-hospital",
+      "services": []
+    },
+    {
+      "name": "Gynecologists",
+      "icon": "bi bi-gender-female",
+      "services": []
+    },
+    {
+      "name": "Urologists",
+      "icon": "bi bi-droplet-half",
+      "services": []
+    },
+    {
+      "name": "Neurologists",
+      "icon": "bi bi-cpu",
+      "services": []
+    },
+    {
+      "name": "ENT Specialists",
+      "icon": "bi bi-ear",
+      "services": []
+    },
+    {
+      "name": "Ophthalmologists",
+      "icon": "bi bi-eye",
+      "services": []
+    },
+    {
+      "name": "Optometrists",
+      "icon": "bi bi-eyeglasses",
+      "services": [
+        "Comprehensive Eye Exams",
+        "Contact Lens Fittings",
+        "Eyeglasses",
+        "Pediatric Eye Care",
+        "Vision Therapy",
+        "LASIK Consultation",
+        "Glaucoma Screening",
+        "Diabetic Eye Exams",
+        "Eye Disease Treatment",
+        "Low Vision Services"
+      ]
+    },
+    {
+      "name": "Allergists",
+      "icon": "bi bi-cloud-drizzle",
+      "services": []
+    },
+    {
+      "name": "Endocrinologists",
+      "icon": "bi bi-droplet-fill",
+      "services": []
+    },
+    {
+      "name": "Gastroenterologists",
+      "icon": "bi bi-basket",
+      "services": []
+    },
+    {
+      "name": "Nephrologists",
+      "icon": "bi bi-droplet",
+      "services": []
+    },
+    {
+      "name": "Pulmonologists",
+      "icon": "bi bi-wind",
+      "services": []
+    },
+    {
+      "name": "Rheumatologists",
+      "icon": "bi-stickies",
+      "services": []
+    },
+    {
+      "name": "Infectious Disease",
+      "icon": "bi bi-bug",
+      "services": []
+    },
+    {
+      "name": "Emergency Medicine",
+      "icon": "bi bi-hospital-fill",
+      "services": []
+    },
+    {
+      "name": "Family Medicine",
+      "icon": "bi bi-house-heart",
+      "services": []
+    },
+    {
+      "name": "Internal Medicine",
+      "icon": "bi bi-file-medical",
+      "services": []
+    },
+    {
+      "name": "General Surgeons",
+      "icon": "bi bi-scissors",
+      "services": []
+    },
+    {
+      "name": "Plastic Surgeons",
+      "icon": "bi bi-body-text",
+      "services": []
+    }
+  ]
+}

@@ -1,25 +1,35 @@
 import React, { useState } from "react";
 import "../../../assets/css/heroSearch.css";
-import HeroCategories from "./HeroCategory";
-
-//
+import HeroCategoriesDropdown from "./HeroCategoryDropDown";
+import categories from "../../../assets/data/categories_services.json";
 
 const HeroSearch = () => {
   const [query, setQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleSearch = (searchTerm = null) => {
     const term = searchTerm || query;
     if (term.trim()) {
       setQuery(term);
       console.log("Searching for:", term);
-      // TODO: navigate(/search?query=${encodeURIComponent(term)});
+      // TODO: navigate(`/search?query=${encodeURIComponent(term)}`);
     }
   };
+
+  const handleCategoryClick = (categoryName) => {
+    setSelectedCategory(categoryName);
+    setQuery(""); // clear query so placeholder updates
+    console.log("Category selected:", categoryName);
+  };
+
+  const categoryObj = categories.categories.find(
+    (cat) => cat.name === selectedCategory
+  );
 
   return (
     <section className="hero-search bg-white rounded-4 shadow">
       <div className="container text-center">
-        {/* Search Box Wrapper with background/shadow */}
+        {/* Search Box */}
         <div className="row justify-content-center mb-4">
           <div className="col-12 col-md-10 col-lg-8">
             <div className="p-4 bg-white rounded-4 shadow-sm">
@@ -39,8 +49,11 @@ const HeroSearch = () => {
                     type="text"
                     className="form-control form-control-lg ps-5 rounded-pill"
                     placeholder="Search doctors, clinics, or services..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    value={selectedCategory || query}
+                    onChange={(e) => {
+                      setQuery(e.target.value);
+                      setSelectedCategory(null); // optional: clears category if user types manually
+                    }}
                   />
                 </div>
                 <button
@@ -55,8 +68,35 @@ const HeroSearch = () => {
           </div>
         </div>
 
-        {/* Category Badges with Icons */}
-        <HeroCategories onCategoryClick={handleSearch} />
+        {/* Category Dropdown */}
+        <HeroCategoriesDropdown onCategoryClick={handleCategoryClick} />
+
+        {/* Services list */}
+        <div id="heroServices" className="mt-4">
+          {categoryObj ? (
+            <>
+              <h6 className="fw-bold text-primary">
+                {categoryObj.name} Services
+              </h6>
+              <ul className="list-unstyled d-flex flex-wrap justify-content-center mt-2">
+                {categoryObj.services.map((service, idx) => (
+                  <li
+                    key={idx}
+                    className="badge bg-light text-dark border m-1 px-3 py-2"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => handleSearch(service)}
+                  >
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-muted">
+              Select a category to view its services.
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );
