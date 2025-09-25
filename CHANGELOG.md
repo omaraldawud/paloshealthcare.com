@@ -3,6 +3,16 @@
 
 ### Features
 
+* Added Reviews ([abb889d](https://github.com/omaraldawud/paloshealthcare.com/commit/abb889d1c27858472d1571d6eb3b146263ef2f0d))
+* Added Reviews ([c496a24](https://github.com/omaraldawud/paloshealthcare.com/commit/c496a24de00d2ffa87b835f966aa72a2a6b756ba))
+* Branching out of Main ([5bf9476](https://github.com/omaraldawud/paloshealthcare.com/commit/5bf9476a9167679786e2238f6672f97a75c99662))
+* Ci/CD Steps 2 - FTP to site/dist. -3- ([c17a48e](https://github.com/omaraldawud/paloshealthcare.com/commit/c17a48e08413565afde7ac3efd5e6a3fc3aa99cd))
+
+# [1.3.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.2.0...v1.3.0) (2025-09-25)
+
+
+### Features
+
 * Added Reviews ([c496a24](https://github.com/omaraldawud/paloshealthcare.com/commit/c496a24de00d2ffa87b835f966aa72a2a6b756ba))
 * Branching out of Main ([5bf9476](https://github.com/omaraldawud/paloshealthcare.com/commit/5bf9476a9167679786e2238f6672f97a75c99662))
 * Ci/CD Steps 2 - FTP to site/dist. -3- ([c17a48e](https://github.com/omaraldawud/paloshealthcare.com/commit/c17a48e08413565afde7ac3efd5e6a3fc3aa99cd))
