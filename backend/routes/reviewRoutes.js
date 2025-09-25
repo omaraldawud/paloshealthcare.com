@@ -2,6 +2,37 @@ const express = require("express");
 const router = express.Router();
 const Review = require("../models/Review"); // your Mongoose model
 
+router.post("/by-businesses", async (req, res) => {
+  try {
+    const { businessIds } = req.body; // array of ObjectId strings
+    if (!businessIds || !businessIds.length) {
+      return res.status(400).json({ message: "No business IDs provided" });
+    }
+
+    const reviews = await Review.find({ businessId: { $in: businessIds } })
+      .populate("userId", "name")
+      .populate("businessId", "name");
+
+    res.json(reviews);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// GET reviews for a specific business
+router.get("/business/:businessId", async (req, res) => {
+  try {
+    const reviews = await Review.find({ businessId: req.params.businessId })
+      .populate("userId", "name email") // optional: only show user info you want
+      .sort({ createdAt: -1 }); // newest first
+    res.json(reviews);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error fetching reviews" });
+  }
+});
+
 // GET all reviews
 router.get("/", async (req, res) => {
   try {

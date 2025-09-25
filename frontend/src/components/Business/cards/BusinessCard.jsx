@@ -1,7 +1,8 @@
 import { getMedTypeIcon } from "../../../utils/getMedTypeIcon";
+import ReviewCard from "../../reviews/cards/ReviewCard";
 import "../css/business.css";
 
-const BusinessCard = ({ business }) => {
+const BusinessCard = ({ business, reviews = [] }) => {
   const renderRatingStars = (rating) => {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -163,6 +164,38 @@ const BusinessCard = ({ business }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Reviews Section */}
+      <div className="mt-4 pt-3 border-top">
+        <div className="d-flex justify-content-between align-items-center mb-3 px-4">
+          <h6 className="mb-0 text-muted text-uppercase fw-bold">
+            Customer Reviews
+          </h6>
+          <span className="badge bg-light text-dark border">
+            {reviews.length} {reviews.length === 1 ? "review" : "reviews"}
+          </span>
+        </div>
+
+        {reviews.length ? (
+          <div className="row g-3 px-4 pb-3">
+            {reviews.map((r) => (
+              <div key={r._id} className="col-md-4 d-flex">
+                <ReviewCard review={r} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-4 bg-light rounded mx-4 mb-3">
+            <p className="text-muted mb-2">
+              <i className="bi bi-chat-square-text me-2"></i>
+              No reviews yet.
+            </p>
+            <small className="text-muted">
+              Be the first to share your experience!
+            </small>
+          </div>
+        )}
       </div>
     </div>
   );

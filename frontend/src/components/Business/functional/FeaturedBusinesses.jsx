@@ -1,53 +1,59 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import BusinessCard from "../cards/BusinessCard.jsx";
+import businessesJSON from "../data/businesses.json";
 
 const FeaturedBusinesses = () => {
   const [featured, setFeatured] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [reviews, setReviews] = useState({}); // { businessId: [reviews] }
+  const useMongo = import.meta.env.VITE_USE_MONGO === "true";
 
   useEffect(() => {
-    const fetchFeatured = async () => {
-      try {
-        const res = await fetch(
-          "http://localhost:5000/api/businesses/featured"
-        );
-        const data = await res.json();
-        setFeatured(data);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+    if (useMongo) {
+      fetch("http://localhost:5000/api/businesses?featured=true")
+        .then((res) => res.json())
+        .then(async (data) => {
+          setFeatured(data);
 
-    fetchFeatured();
-  }, []);
+          const businessIds = data.map((b) => b._id);
+          if (businessIds.length) {
+            const res = await fetch(
+              "http://localhost:5000/api/reviews/by-businesses",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ businessIds }),
+              }
+            );
+            const reviewsData = await res.json();
 
-  if (loading) return <p>Loading featured businesses...</p>;
+            // Transform into { businessId: [reviews] }
+            const reviewMap = {};
+            reviewsData.forEach((r) => {
+              const id = r.businessId._id;
+              if (!reviewMap[id]) reviewMap[id] = [];
+              reviewMap[id].push(r);
+            });
+            setReviews(reviewMap);
+          }
+        })
+        .catch((err) => {
+          console.error("Mongo fetch failed, using JSON fallback:", err);
+          setFeatured(businessesJSON.filter((b) => b.featured));
+        });
+    } else {
+      setFeatured(businessesJSON.filter((b) => b.featured));
+    }
+  }, [useMongo]);
 
   return (
     <div className="container">
-      <div className="featured-section">
-        <div className="text-center mb-5">
-          <div className="d-flex align-items-center justify-content-center mb-3">
-            <hr className="flex-grow-1 border-gradient" />
-            <span className="mx-3 text-success">Featured</span>
-            <hr className="flex-grow-1 border-gradient" />
+      <div className="row g-4">
+        {featured.map((b) => (
+          <div key={b._id} className="col-md-12">
+            {console.log("reviews:", reviews)}
+            <BusinessCard business={b} reviews={reviews[b._id] || []} />
           </div>
-          <h2 className="fw-bold display-5 text-dark">
-            Featured Healthcare Providers
-          </h2>
-          <p className="text-muted lead">
-            Discover trusted medical businesses in our directory
-          </p>
-        </div>
-        <div className="row g-4">
-          {featured.map((business) => (
-            <div className="col-md-12" key={business._id}>
-              <BusinessCard business={business} />
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     </div>
   );
