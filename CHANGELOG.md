@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.5.0...v1.6.0) (2025-09-26)
+
+
+### Features
+
+* Hooking Railway -3- ([1aab3cd](https://github.com/omaraldawud/paloshealthcare.com/commit/1aab3cd2038f205dd14d75a7e5bee7c14e4cd25e))
+
 # [1.5.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.4.0...v1.5.0) (2025-09-25)
 
 
