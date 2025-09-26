@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import BusinessCard from "../Business/cards/BusinessCard";
 
-import HeroInfoBox from "../Layout/hero/HeroInfoBox";
-import Layout from "../Layout/Layout";
-import BusinessListingSideBar from "../Business/functional/BusinessListingSideBar";
-import heroIMGmedical2 from "../../assets/images/medical-femal-doctor.jpg";
-import Footer from "../Layout/Footer";
-import SearchSideBar from "./SearchSidebar";
 import HeroSearch from "../Layout/hero/HeroSearch";
+import Layout from "../Layout/Layout";
+import SearchSideBar from "./SearchSidebar";
+import Footer from "../Layout/Footer";
 
 const SearchResults = () => {
   const location = useLocation();
@@ -24,37 +21,64 @@ const SearchResults = () => {
 
   useEffect(() => {
     if (!query) return;
+
     const fetchResults = async () => {
       setLoading(true);
       try {
+        // 1️⃣ Fetch businesses
         const res = await fetch(
           `${API_BASE}/api/businesses/search?query=${encodeURIComponent(query)}`
         );
         const data = await res.json();
         setResults(data);
+
+        // 2️⃣ Fetch reviews if we have any businesses
+        if (data.length) {
+          const resReviews = await fetch(
+            `${API_BASE}/api/reviews/by-businesses`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ businessIds: data.map((b) => b._id) }),
+            }
+          );
+          const reviewsData = await resReviews.json();
+
+          // Transform into { businessId: [reviews] }
+          const reviewMap = {};
+          reviewsData.forEach((r) => {
+            const id = r.businessId._id;
+            if (!reviewMap[id]) reviewMap[id] = [];
+            reviewMap[id].push(r);
+          });
+          setReviews(reviewMap);
+        }
       } catch (err) {
         console.error("Error fetching search results:", err);
       } finally {
         setLoading(false);
       }
     };
+
     fetchResults();
-  }, [query]);
+  }, [query, API_BASE]);
 
   return (
     <>
       <div className="mt-5 pt-5">
         <HeroSearch />
       </div>
+
       <Layout sidebar={<SearchSideBar />}>
         <hr
-          className="mx-auto " // centers horizontally and adds vertical spacing
+          className="mx-auto"
           style={{
-            width: "50%", // half the container width
-            borderTop: "4px solid #007bff", // thickness and color
-            borderRadius: "2px", // slightly rounded edges
+            width: "50%",
+            borderTop: "4px solid #007bff",
+            borderRadius: "2px",
           }}
         />
+
         <div className="container">
           <h2 className="fw-bold mb-4">Search Results for "{query}"</h2>
 
@@ -75,6 +99,7 @@ const SearchResults = () => {
           )}
         </div>
       </Layout>
+
       <Footer />
     </>
   );
