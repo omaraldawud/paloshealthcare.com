@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.7.0...v1.8.0) (2025-09-29)
+
+
+### Features
+
+* DEveloped MongoDB Models ([ea5cd08](https://github.com/omaraldawud/paloshealthcare.com/commit/ea5cd0878f93abc0204dbdc41a8ed40550d03db5))
+
 # [1.7.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.6.0...v1.7.0) (2025-09-29)
 
 
