@@ -1,0 +1,122 @@
+[
+  {
+    "id": "r1",
+    "text": "Dr. Asfour was very attentive and explained my treatment plan clearly. Highly recommend!",
+    "rating": 5,
+    "time_created": "2025-08-10T09:20:00",
+    "businessType": "doctor",
+    "user": {
+      "id": "u1",
+      "name": "Jane Doe",
+      "avatar": "/images/users/jane-doe.png"
+    }
+  },
+  {
+    "id": "r2",
+    "text": "Friendly staff and clean clinic. Appointment started on time.",
+    "rating": 4,
+    "time_created": "2025-07-22T11:15:00",
+    "businessType": "clinic",
+    "user": {
+      "id": "u2",
+      "name": "John Smith",
+      "avatar": "/images/users/john-smith.png"
+    }
+  },
+  {
+    "id": "r3",
+    "text": "Waiting room was crowded, but the doctor was very professional.",
+    "rating": 4,
+    "time_created": "2025-06-18T14:40:00",
+    "businessType": "doctor",
+    "user": {
+      "id": "u3",
+      "name": "Emily Johnson",
+      "avatar": "/images/users/emily-johnson.png"
+    }
+  },
+  {
+    "id": "r4",
+    "text": "Great pediatric care. My child felt comfortable and well cared for.",
+    "rating": 5,
+    "time_created": "2025-08-01T10:10:00",
+    "businessType": "clinic",
+    "user": {
+      "id": "u4",
+      "name": "Michael Brown",
+      "avatar": "/images/users/michael-brown.png"
+    }
+  },
+  {
+    "id": "r5",
+    "text": "The dermatologist was thorough and answered all my questions.",
+    "rating": 5,
+    "time_created": "2025-07-05T16:30:00",
+    "businessType": "doctor",
+    "user": {
+      "id": "u5",
+      "name": "Sophia Lee",
+      "avatar": "/images/users/sophia-lee.png"
+    }
+  },
+  {
+    "id": "r6",
+    "text": "Clinic was clean and staff were polite. Had to wait 20 minutes past my appointment.",
+    "rating": 4,
+    "time_created": "2025-06-28T13:50:00",
+    "businessType": "clinic",
+    "user": {
+      "id": "u6",
+      "name": "David Wilson",
+      "avatar": "/images/users/david-wilson.png"
+    }
+  },
+  {
+    "id": "r7",
+    "text": "Excellent family medicine practice. Very attentive to my concerns.",
+    "rating": 5,
+    "time_created": "2025-08-12T09:15:00",
+    "businessType": "clinic",
+    "user": {
+      "id": "u7",
+      "name": "Olivia Martinez",
+      "avatar": "/images/users/olivia-martinez.png"
+    }
+  },
+  {
+    "id": "r8",
+    "text": "Dr. Johnson was kind and explained the procedure very clearly.",
+    "rating": 5,
+    "time_created": "2025-07-20T10:50:00",
+    "businessType": "doctor",
+    "user": {
+      "id": "u8",
+      "name": "Liam Thompson",
+      "avatar": "/images/users/liam-thompson.png"
+    }
+  },
+  {
+    "id": "r9",
+    "text": "Very professional clinic. Convenient location and good parking.",
+    "rating": 4,
+    "time_created": "2025-08-08T12:30:00",
+    "businessType": "clinic",
+    "user": {
+      "id": "u9",
+      "name": "Isabella Garcia",
+      "avatar": "/images/users/isabella-garcia.png"
+    }
+  },
+  {
+    "id": "r10",
+    "text": "I felt comfortable with the doctor and the care I received was excellent.",
+    "rating": 5,
+    "time_created": "2025-06-30T15:20:00",
+    "businessType": "doctor",
+    "user": {
+      "id": "u10",
+      "name": "Noah Kim",
+      "avatar": "/images/users/noah-kim.png"
+    }
+  }
+]

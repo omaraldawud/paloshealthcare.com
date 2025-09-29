@@ -1,12 +1,22 @@
 [
-{
+  {
     "id": 1,
     "name": "Palos Healthcare Center - Local Medics NEAR Me",
+    "rating": 4.7,
     "type": "clinic",
+    "isWalkIn": true,
+    "isClaimed": true,
     "featured": true,
     "isSponsored": true,
     "specialties": ["Cardiology", "Primary Care", "Urgent Care"],
     "address": "10378 S. Harlem Ave, Palos Hills, IL 60465",
+    "phone": "+1 (708) 529-7109",
+    "image": "/images/businesses/paloshealthcarecenter-logo.webp",
+    "logoLink": "https://paloshealthcarecenter.com/wp-content/uploads/2025/05/LOGO.png",
+    "website": "https://www.paloshealthcarecenter.com",
+    "appointmentLink": "https://healow.com/apps/provider/wail-asfour-3623282",
+    "sponsoredDescription": "Sponsored Listing: Learn more about our special programs and services.",
+    "featuredDescription": "Featured Listing: Trusted clinic providing comprehensive care in your area.",
     "hours": [
       { "day": "Mon", "open": "8:00am", "close": "6:00pm" },
       { "day": "Tue", "open": "8:00am", "close": "6:00pm" },
@@ -15,355 +25,316 @@
       { "day": "Fri", "open": "8:00am", "close": "6:00pm" },
       { "day": "Sat", "open": "9:00am", "close": "2:00pm" }
     ],
-    "phone": "+1 (708) 529-7109",
-    "rating": 4.7,
-    "sponsoredDescription": "Sponsored Listing: Learn more about our special programs and services.",
-    "featuredDescription": "Featured Listing: Trusted clinic providing comprehensive care in your area.",
-    "image": "/images/businesses/paloshealthcarecenter-logo.webp",
-    "website": "https://www.paloshealthcarecenter.com"
+    "description": "Comprehensive healthcare center offering primary care, cardiology, and urgent care services with state-of-the-art facilities.",
+    "yearEstablished": 1998,
+    "employees": "25-50",
+    "insuranceProviders": ["Blue Cross", "Aetna", "Medicare", "Medicaid"],
+    "languagesSpoken": ["English", "Spanish", "Polish", "Arabic"],
+    "amenities": [
+      "Pharmacy",
+      "Handicap Parking",
+      "Free Parking",
+      "Free WiFi",
+      "TV in Waiting Room",
+      "Coffee Station",
+      "Elevator",
+      "Play Area"
+    ],
+    "awards": ["Best Healthcare Provider 2023"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/paloshealthcare",
+      "instagram": "https://instagram.com/paloshealthcare",
+      "linkedin": "https://linkedin.com/company/paloshealthcare"
+    },
+    "doctors": [
+      {
+        "drName": "Wail E. Asfour, MD, FACC, FSCAI",
+        "drTitle": "MD, Internal Medicine - Cardiovascular Disease",
+        "drLink": "https://cardioconsultantspc.com/dr-wail-asfour-cardiologist.php"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "Northwestern Memorial Hospital",
+        "affilationLink": "https://www.nm.org/",
+        "affilationLogo": "https://www.nm.org/content/northwestern/img/northwestern-medicine-logo-white.png?v=20160601"
+      },
+      {
+        "affilationName": "Rush Health",
+        "affilationLink": "https://www.rush.edu/locations/rush-copley-medical-center",
+        "affilationLogo": "https://www.rush.edu/themes/rush_theme/public/images/header-logo--desktop.svg"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Greenwood Hospital",
-    "type": "Hospital",
+    "name": "Orland Advanced Dentistry",
+    "rating": 4.7,
+    "type": "doctor",
+    "isWalkIn": false,
+    "isClaimed": false,
     "featured": true,
     "isSponsored": true,
-    "specialties": ["Cardiology", "Emergency"],
-    "address": "456 Oak Ave, Chicago, IL",
-    "hours": [
-      { "day": "Mon", "open": "00:00", "close": "23:59" },
-      { "day": "Tue", "open": "00:00", "close": "23:59" },
-      { "day": "Wed", "open": "00:00", "close": "23:59" },
-      { "day": "Thu", "open": "00:00", "close": "23:59" },
-      { "day": "Fri", "open": "00:00", "close": "23:59" },
-      { "day": "Sat", "open": "00:00", "close": "23:59" },
-      { "day": "Sun", "open": "00:00", "close": "23:59" }
+    "specialties": [
+      "Dental Implants",
+      "Braces",
+      "Root Canal Therapy",
+      "Cosmetic Dentistry",
+      "Orthodontics"
     ],
-    "phone": "(312) 555-5678",
-    "website": "https://greenwoodhospital.com",
-    "rating": 4.7,
-    "image": "/images/businesses/sunrise.jfif"
+    "address": "10354 South Harlem Ave Palos Hills, Illinois 60465",
+    "phone": "(708) 907-3742",
+    "image": "/images/businesses/sunrise.jfif",
+    "logoLink": "https://orlanddentistry.com/logo.png",
+    "website": "https://www.orlanddentistry.com/",
+    "appointmentLink": "https://www.orlanddentistry.com/appointment-request/orland-park-location/",
+    "sponsoredDescription": "Sponsored Listing: Advanced dental care for the whole family.",
+    "featuredDescription": "Featured Listing: Trusted dental specialists serving Orland Park and beyond.",
+    "hours": [
+      { "day": "Mon", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Tue", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Wed", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Thu", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Fri", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Sat", "open": "9:00am", "close": "2:00pm" }
+    ],
+    "description": "We have a commitment to providing you with well-rounded dental care and are proud to have two offices to serve our patients in Orland Park and Worth.",
+    "yearEstablished": 2005,
+    "employees": "10-20",
+    "insuranceProviders": ["Blue Cross", "United Healthcare", "Cigna"],
+    "languagesSpoken": ["English", "Spanish", "Polish"],
+    "amenities": ["Free WiFi", "Wheelchair Access", "Parking"],
+    "awards": ["Top Dentistry Practice 2022"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/orlanddentistry",
+      "instagram": "https://instagram.com/orlanddentistry",
+      "linkedin": "https://linkedin.com/company/orlanddentistry"
+    },
+    "doctors": [
+      {
+        "drName": "Dr. Sawsan Asfour, DDS & Associate",
+        "drTitle": "we take every smile personally",
+        "drLink": "https://www.orlanddentistry.com/meet-the-doctors/dr-sawsan-asfour-dds/"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "Advocate Christ Medical Center",
+        "affilationLink": "https://www.advocatehealth.com/",
+        "affilationLogo": "https://www.advocatehealth.com/logo.png"
+      }
+    ]
   },
   {
     "id": 3,
     "name": "Downtown Urgent Care",
-    "type": "Urgentcare",
-    "specialties": ["Minor Injuries", "Flu & Cold", "X-Ray"],
-    "address": "789 Pine St, Chicago, IL",
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }
-    ],
-    "phone": "(312) 555-9012",
-    "website": "https://downtownurgentcare.com",
     "rating": 4.3,
-    "image": "/images/businesses/sunrise.jfif"
+    "type": "urgentcare",
+    "isWalkIn": true,
+    "isClaimed": true,
+    "featured": false,
+    "isSponsored": false,
+    "specialties": ["Minor Injuries", "Flu & Cold", "X-Ray", "Lab Testing"],
+    "address": "789 Pine St, Chicago, IL 60602",
+    "phone": "(312) 555-9012",
+    "image": "/images/businesses/urgentcare.png",
+    "logoLink": "https://downtownurgentcare.com/logo.png",
+    "website": "https://downtownurgentcare.com",
+    "appointmentLink": "https://downtownurgentcare.com/book",
+    "sponsoredDescription": "Sponsored Listing: Providing urgent care when you need it most.",
+    "featuredDescription": "Featured Listing: Trusted urgent care facility in downtown Chicago.",
+    "hours": [
+      { "day": "Mon", "open": "8:00am", "close": "10:00pm" },
+      { "day": "Tue", "open": "8:00am", "close": "10:00pm" },
+      { "day": "Wed", "open": "8:00am", "close": "10:00pm" },
+      { "day": "Thu", "open": "8:00am", "close": "10:00pm" },
+      { "day": "Fri", "open": "8:00am", "close": "10:00pm" },
+      { "day": "Sat", "open": "9:00am", "close": "6:00pm" },
+      { "day": "Sun", "open": "9:00am", "close": "6:00pm" }
+    ],
+    "description": "Quick and convenient urgent care for non-life-threatening conditions with on-site X-ray and lab services.",
+    "yearEstablished": 2010,
+    "employees": "15-30",
+    "insuranceProviders": ["Aetna", "Blue Cross", "Humana"],
+    "languagesSpoken": ["English", "Spanish"],
+    "amenities": ["Free WiFi", "TV in Waiting Room", "Short Wait Times"],
+    "awards": ["Top Urgent Care 2021"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/downtownurgentcare",
+      "instagram": "https://instagram.com/downtownurgentcare"
+    },
+    "doctors": [
+      {
+        "drName": "Dr. Michael Lee",
+        "drTitle": "MD, Emergency Medicine",
+        "drLink": "https://downtownurgentcare.com/team/michael-lee"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "UIC Medical Center",
+        "affilationLink": "https://hospital.uic.edu",
+        "affilationLogo": "https://hospital.uic.edu/logo.png"
+      }
+    ]
   },
-    {
+  {
     "id": 4,
-    "name": "Sunrise Clinic",
-    "featured": true,
-    "isSponsored": true,
-    "type": "Clinic",
-    "specialties": ["Dermatology", "General Practice"],
-    "address": "123 Main St, Chicago, IL",
-    "phone": "(312) 555-1234",
-    "website": "https://sunriseclinic.com",
+    "name": "Sunrise Clinic - Dermatology Specialists",
     "rating": 4.5,
-        "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
+    "type": "clinic",
+    "isWalkIn": false,
+    "isClaimed": false,
+    "featured": false,
+    "isSponsored": true,
+    "specialties": ["Dermatology", "General Practice", "Skin Care"],
+    "address": "123 Main St, Chicago, IL 60603",
+    "phone": "(312) 555-1234",
+    "image": "/images/businesses/sunrise.jfif",
+    "logoLink": "https://sunriseclinic.com/logo.png",
+    "website": "https://sunriseclinic.com",
+    "appointmentLink": "https://sunriseclinic.com/book",
+    "sponsoredDescription": "Sponsored Listing: Advanced dermatology services for healthy skin.",
+    "featuredDescription": "Featured Listing: Specialists in dermatology and cosmetic care.",
+    "hours": [
+      { "day": "Mon", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Tue", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Wed", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Thu", "open": "8:00am", "close": "5:00pm" },
+      { "day": "Fri", "open": "8:00am", "close": "5:00pm" }
+    ],
+    "description": "Specialized dermatology clinic offering skin treatments, cosmetic procedures, and general dermatological care.",
+    "yearEstablished": 2015,
+    "employees": "10-15",
+    "insuranceProviders": ["Blue Cross", "Aetna"],
+    "languagesSpoken": ["English", "Korean"],
+    "amenities": ["Free WiFi", "Parking", "Wheelchair Access"],
+    "awards": ["Best Skin Care Clinic 2022"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/sunriseclinic",
+      "instagram": "https://instagram.com/sunriseclinic"
+    },
+    "doctors": [
+      {
+        "drName": "Dr. Amanda Chen",
+        "drTitle": "MD, Dermatology",
+        "drLink": "https://sunriseclinic.com/team/amanda-chen"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "Chicago General Hospital",
+        "affilationLink": "https://chicagogeneralhospital.com",
+        "affilationLogo": "https://chicagogeneralhospital.com/logo.png"
+      }
+    ]
   },
   {
     "id": 5,
     "name": "Lakeside Pediatric Clinic",
-    "type": "Clinic",
-    "specialties": ["Pediatrics", "Immunizations", "Well Child Visits"],
-    "address": "321 Lakeview Rd, Chicago, IL",
-    "phone": "(312) 555-3456",
-    "website": "https://lakesidepediatrics.com",
     "rating": 4.8,
-        "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"    
+    "type": "clinic",
+    "isWalkIn": true,
+    "isClaimed": true,
+    "featured": true,
+    "isSponsored": false,
+    "specialties": [
+      "Pediatrics",
+      "Immunizations",
+      "Well Child Visits",
+      "Developmental Screening"
+    ],
+    "address": "321 Lakeview Rd, Chicago, IL 60604",
+    "phone": "(312) 555-3456",
+    "image": "/images/businesses/pediatrics.png",
+    "logoLink": "https://lakesidepediatrics.com/logo.png",
+    "website": "https://lakesidepediatrics.com",
+    "appointmentLink": "https://lakesidepediatrics.com/schedule",
+    "sponsoredDescription": "Sponsored Listing: Dedicated pediatric care in your community.",
+    "featuredDescription": "Featured Listing: Trusted pediatricians serving Chicago families.",
+    "hours": [
+      { "day": "Mon", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Tue", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Wed", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Thu", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Fri", "open": "8:00am", "close": "6:00pm" },
+      { "day": "Sat", "open": "9:00am", "close": "1:00pm" }
+    ],
+    "description": "Child-friendly pediatric clinic focused on comprehensive healthcare for infants, children, and adolescents.",
+    "yearEstablished": 2008,
+    "employees": "20-35",
+    "insuranceProviders": ["Blue Cross", "Aetna", "Cigna", "Medicaid"],
+    "languagesSpoken": ["English", "Spanish", "Polish"],
+    "amenities": ["Play Area", "Free WiFi", "Baby Changing Stations"],
+    "awards": ["Best Pediatric Clinic 2023"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/lakesidepediatrics",
+      "instagram": "https://instagram.com/lakesidepediatrics"
+    },
+    "doctors": [
+      {
+        "drName": "Dr. Rachel Green",
+        "drTitle": "MD, Pediatrics",
+        "drLink": "https://lakesidepediatrics.com/team/rachel-green"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "Lurie Children's Hospital",
+        "affilationLink": "https://www.luriechildrens.org",
+        "affilationLogo": "https://www.luriechildrens.org/logo.png"
+      }
+    ]
   },
-
   {
     "id": 6,
-    "name": "Northside Clinic",
-    "featured": true,
-    "type": "Clinic",
-    "specialties": ["Family Medicine", "Lab Tests"],
-    "address": "987 North St, Chicago, IL",
+    "name": "Northside Clinic - Family Medicine",
+    "rating": 4.4,
+    "type": "clinic",
+    "isWalkIn": false,
+    "isClaimed": true,
+    "featured": false,
+    "isSponsored": false,
+    "specialties": ["Family Medicine", "Lab Tests", "Preventive Care"],
+    "address": "987 North St, Chicago, IL 60605",
     "phone": "(312) 555-2345",
+    "image": "/images/businesses/familymedicine.png",
+    "logoLink": "https://northsideclinic.com/logo.png",
     "website": "https://northsideclinic.com",
-    "rating": 4.4,
+    "appointmentLink": "https://northsideclinic.com/book",
+    "sponsoredDescription": "Sponsored Listing: Comprehensive family care for all ages.",
+    "featuredDescription": "Featured Listing: Experienced family physicians serving Chicago.",
     "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 7,
-    "name": "City General Hospital",
-    "type": "Hospital",
-    "specialties": ["Emergency", "Surgery", "Radiology"],
-    "address": "654 City Rd, Chicago, IL",
-    "phone": "(312) 555-6789",
-    "website": "https://citygeneralhospital.com",
-    "rating": 4.6,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 8,
-    "name": "Westside Urgent Care",
-    "featured": true,
-    "type": "Urgentcare",
-    "specialties": ["Flu & Cold", "Lab Testing", "X-Ray"],
-    "address": "321 West St, Chicago, IL",
-    "phone": "(312) 555-4321",
-    "website": "https://westsideurgentcare.com",
-    "rating": 4.2,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 9,
-    "name": "Bright Health Clinic",
-    "type": "Clinic",
-    "specialties": ["Nutrition", "Wellness", "General Practice"],
-    "address": "123 Bright Ave, Chicago, IL",
-    "phone": "(312) 555-8765",
-    "website": "https://brighthealthclinic.com",
-    "rating": 4.5,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 10,
-    "name": "Lakeshore Hospital",
-    "type": "Hospital",
-    "specialties": ["Orthopedics", "Emergency", "Radiology"],
-    "address": "456 Lakeshore Dr, Chicago, IL",
-    "phone": "(312) 555-6543",
-    "website": "https://lakeshorehospital.com",
-    "rating": 4.7,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 11,
-    "name": "Southside Urgent Care",
-    "type": "Urgentcare",
-    "specialties": ["Minor Injuries", "Flu Shots", "X-Ray"],
-    "address": "789 South St, Chicago, IL",
-    "phone": "(312) 555-2109",
-    "website": "https://southsideurgentcare.com",
-    "rating": 4.3,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 12,
-    "name": "Harmony Clinic",
-    "type": "Clinic",
-    "specialties": ["Physical Therapy", "Wellness", "Family Medicine"],
-    "address": "321 Harmony Ln, Chicago, IL",
-    "phone": "(312) 555-5432",
-    "website": "https://harmonyclinic.com",
-    "rating": 4.6,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 13,
-    "name": "Central Hospital",
-    "type": "Hospital",
-    "specialties": ["Emergency", "Surgery", "ICU"],
-    "address": "654 Central Ave, Chicago, IL",
-    "phone": "(312) 555-9876",
-    "website": "https://centralhospital.com",
-    "rating": 4.8,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 14,
-    "name": "Family First Urgent Care",
-    "type": "Primarycare",
-    "specialties": ["Flu & Cold", "Lab Testing", "Minor Injuries"],
-    "address": "123 Family St, Chicago, IL",
-    "phone": "(312) 555-3210",
-    "website": "https://familyfirsturgentcare.com",
-    "rating": 4.4,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-    "id": 15,
-    "name": "Northstar Clinic",
-    "type": "Clinic",
-    "specialties": ["Dermatology", "Nutrition", "Wellness"],
-    "address": "987 Northstar Rd, Chicago, IL",
-    "phone": "(312) 555-6547",
-    "website": "https://northstarclinic.com",
-    "rating": 4.7,
-    "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-    "image": "/images/businesses/sunrise.jfif"
-  },
-  {
-  "id": 16,
-  "name": "Bright Smile Dental",
-  "type": "dentist",
-  "featured": true,
-  "isSponsored": false,
-  "specialties": ["Cosmetic Dentistry", "Orthodontics", "Pediatric Dentistry"],
-  "address": "456 Oak Street, Naperville, IL 60540",
-  "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-  "phone": "+1 (630) 555-2143",
-  "rating": 4.8,
-  "sponsoredDescription": "Sponsored Listing: Learn more about our patient-friendly dental plans.",
-  "featuredDescription": "Featured Listing: Modern dental care with a focus on comfort and quality.",
-  "image": "/images/businesses/brightsmile-dental-logo.webp",
-  "website": "https://www.brightsmiledental.com"
-},
-{
-  "id": 17,
-  "name": "HeartCare Cardiology Group",
-  "type": "cardio",
-  "featured": false,
-  "isSponsored": true,
-  "specialties": ["Cardiology", "Heart Health", "Preventive Care"],
-  "address": "789 Main Street, Oak Brook, IL 60523",
-  "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-  "phone": "+1 (630) 555-8790",
-  "rating": 4.6,
-  "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
-  "featuredDescription": "Trusted cardiology specialists serving the community with compassionate care.",
-  "image": "/images/businesses/heartcare-cardiology-logo.webp",
-  "website": "https://www.heartcarecardiology.com"
-},
-{
-  "id": 18,
-  "name": "Primary Care for All",
-  "type": "cardio",
-  "featured": false,
-  "isSponsored": true,
-  "specialties": ["Preventive Care"],
-  "address": "789 Main Street, Oak Brook, IL 60523",
-  "hours": [
-      { "day": "Mon", "open": "8:00", "close": "22:00" },
-      { "day": "Tue", "open": "8:00", "close": "22:00" },
-      { "day": "Wed", "open": "8:00", "close": "22:00" },
-      { "day": "Thu", "open": "8:00", "close": "22:00" },
-      { "day": "Fri", "open": "8:00", "close": "22:00" },
-      { "day": "Sat", "open": "8:00", "close": "22:00" },
-      { "day": "Sun", "open": "8:00", "close": "22:00" }],
-  "phone": "+1 (630) 555-8790",
-  "rating": 4.6,
-  "sponsoredDescription": "Sponsored Listing: Explore our advanced heart health and treatment programs.",
-  "featuredDescription": "Trusted cardiology specialists serving the community with compassionate care.",
-  "image": "/images/businesses/heartcare-cardiology-logo.webp",
-  "website": "https://www.heartcarecardiology.com"
-}
+      { "day": "Mon", "open": "7:00am", "close": "7:00pm" },
+      { "day": "Tue", "open": "7:00am", "close": "7:00pm" },
+      { "day": "Wed", "open": "7:00am", "close": "7:00pm" },
+      { "day": "Thu", "open": "7:00am", "close": "7:00pm" },
+      { "day": "Fri", "open": "7:00am", "close": "7:00pm" }
+    ],
+    "description": "Comprehensive family medicine practice offering preventive care, chronic disease management, and lab services.",
+    "yearEstablished": 2012,
+    "employees": "15-25",
+    "insuranceProviders": ["United Healthcare", "Blue Cross", "Medicare"],
+    "languagesSpoken": ["English", "Spanish"],
+    "amenities": ["Free WiFi", "On-site Lab", "Parking"],
+    "awards": ["Best Family Clinic 2020"],
+    "socialMedia": {
+      "facebook": "https://facebook.com/northsideclinic",
+      "instagram": "https://instagram.com/northsideclinic"
+    },
+    "doctors": [
+      {
+        "drName": "Dr. Kevin Patel",
+        "drTitle": "MD, Family Medicine",
+        "drLink": "https://northsideclinic.com/team/kevin-patel"
+      }
+    ],
+    "affilationHostpitals": [
+      {
+        "affilationName": "Northwestern Memorial Hospital",
+        "affilationLink": "https://www.nm.org",
+        "affilationLogo": "https://www.nm.org/logo.png"
+      }
+    ]
+  }
 ]

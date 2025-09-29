@@ -43,4 +43,27 @@ router.get("/search", async (req, res) => {
   }
 });
 
+// Single Business by ID
+// GET single business by ID
+router.get("/:id", async (req, res) => {
+  try {
+    const business = await Business.findById(req.params.id);
+
+    if (!business) {
+      return res.status(404).json({ message: "Business not found" });
+    }
+
+    res.json(business);
+  } catch (err) {
+    console.error(err);
+
+    // Handle invalid ObjectId format
+    if (err.name === "CastError") {
+      return res.status(400).json({ message: "Invalid business ID format" });
+    }
+
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 module.exports = router;

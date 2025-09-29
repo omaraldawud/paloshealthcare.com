@@ -17,8 +17,12 @@ const SearchResults = () => {
   const searchParams = new URLSearchParams(location.search);
   const query = searchParams.get("query");
 
-  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+  const API_BASE =
+    import.meta.env.VITE_USE_MONGO === "true"
+      ? import.meta.env.VITE_API_BASE_URL
+      : "http://localhost:5173";
 
+  console.log("API_BASE :", API_BASE);
   useEffect(() => {
     if (!query) return;
 

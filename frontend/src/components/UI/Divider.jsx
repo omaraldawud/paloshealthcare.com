@@ -10,7 +10,7 @@ export default function Divider({
 }) {
   return (
     <hr
-      className={`mx-auto my-4 ${className}`}
+      className={`mx-auto ${className}`}
       style={{
         width,
         borderTop: `${thickness} solid ${color}`,

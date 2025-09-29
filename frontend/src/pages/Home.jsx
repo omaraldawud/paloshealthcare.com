@@ -17,7 +17,6 @@ import HeroInfoBox from "../components/Layout/hero/HeroInfoBox";
 import Features from "../components/Layout/sections/Features";
 import NotifyForm from "../components/Layout/forms/NotifyForm";
 //images
-import heroIMGmedical from "../assets/images/local-medical-business.jpg";
 import heroIMGmedical2 from "../assets/images/medical-femal-doctor.jpg";
 
 import FeaturedBusinesses from "../components/Business/functional/FeaturedBusinesses";

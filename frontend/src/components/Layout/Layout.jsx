@@ -9,10 +9,10 @@ export default function Layout({ children, sidebar }) {
       <main className="container">
         <div className="row">
           {/* Main content */}
-          <div className={sidebar ? "col-lg-8" : "col-12"}>{children}</div>
+          <div className={sidebar ? "col-lg-9" : "col-12"}>{children}</div>
 
           {/* Sidebar, if provided */}
-          {sidebar && <div className="col-lg-4">{sidebar}</div>}
+          {sidebar && <div className="col-lg-3">{sidebar}</div>}
         </div>
       </main>
     </div>

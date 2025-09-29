@@ -9,7 +9,7 @@ const TopBar = () => {
 
   const menuItems = [
     { name: "Home", icon: "bi-house-door", link: "/" },
-    { name: "Browse Categories", icon: "bi-grid", link: "/medical-businesses" },
+    // { name: "Browse Categories", icon: "bi-grid", link: "/medical-businesses" },
     { name: "Resources", icon: "bi-journal", link: "#resources" },
     { name: "Contact Us", icon: "bi-telephone", link: "#contact" },
   ];
