@@ -27,16 +27,14 @@ const HeroSearch = () => {
     );
     setSelectedCategory(categoryName);
 
-    // Optional: set query to first service
+    // Populate the search field with the first service (optional)
     if (categoryObj && categoryObj.services.length > 0) {
       const firstService = categoryObj.services[0];
       setQuery(firstService);
-      handleSearch(firstService); // automatically navigate
+      // ✅ Do NOT call handleSearch automatically, if so call handleSearch(firstService)
     } else {
       setQuery("");
     }
-
-    console.log("Category selected:", categoryName);
   };
 
   const categoryObj = categories.categories.find(
@@ -61,19 +59,24 @@ const HeroSearch = () => {
                       pointerEvents: "none",
                     }}
                   ></i>
-
                   <input
                     type="text"
                     className="form-control form-control-lg ps-5 rounded-pill"
                     placeholder="Search doctors, clinics, or services..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") handleSearch();
+                    }}
                   />
                 </div>
                 <button
                   className="btn btn-primary btn-lg rounded-pill px-4 mt-3 mt-md-0 ms-md-3"
                   type="button"
                   onClick={() => handleSearch()}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleSearch();
+                  }}
                 >
                   <i className="bi bi-search me-2"></i> Search
                 </button>

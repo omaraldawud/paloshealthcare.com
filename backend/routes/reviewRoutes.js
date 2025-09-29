@@ -1,99 +1,38 @@
 const express = require("express");
 const router = express.Router();
-const Review = require("../models/Review"); // your Mongoose model
+const path = require("path");
+const fs = require("fs").promises;
 
+// Helper to load JSON
+const loadJSON = async (filePath) => {
+  const data = await fs.readFile(filePath, "utf8");
+  return JSON.parse(data);
+};
+
+// POST /api/reviews/by-businesses
 router.post("/by-businesses", async (req, res) => {
-  try {
-    const { businessIds } = req.body; // array of ObjectId strings
-    if (!businessIds || !businessIds.length) {
-      return res.status(400).json({ message: "No business IDs provided ..." });
-    }
-
-    const reviews = await Review.find({ businessId: { $in: businessIds } })
-      .populate("userId", "name")
-      .populate("businessId", "name");
-
-    res.json(reviews);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Server error" });
+  const { businessIds } = req.body;
+  if (!businessIds || !Array.isArray(businessIds)) {
+    return res.status(400).json({ message: "businessIds is required" });
   }
-});
 
-// GET reviews for a specific business
-router.get("/business/:businessId", async (req, res) => {
   try {
-    const reviews = await Review.find({ businessId: req.params.businessId })
-      .populate("userId", "name email") // optional: only show user info you want
-      .sort({ createdAt: -1 }); // newest first
-    res.json(reviews);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Server error fetching reviews" });
-  }
-});
-
-// GET all reviews
-router.get("/", async (req, res) => {
-  try {
-    const reviews = await Review.find().populate("userId businessId");
-    res.json(reviews);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Server error" });
-  }
-});
-
-// GET single review by ID
-router.get("/:id", async (req, res) => {
-  try {
-    const review = await Review.findById(req.params.id).populate(
-      "userId businessId"
+    const reviews = await loadJSON(
+      path.join(__dirname, "../data/sampleMedReviews.json")
     );
-    if (!review) return res.status(404).json({ message: "Review not found" });
-    res.json(review);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Server error" });
-  }
-});
 
-// POST create review
-router.post("/", async (req, res) => {
-  try {
-    const newReview = new Review(req.body);
-    const savedReview = await newReview.save();
-    res.status(201).json(savedReview);
-  } catch (err) {
-    console.error(err);
-    res.status(400).json({ message: "Invalid data", error: err.message });
-  }
-});
+    // Map reviews to businesses by type (simple mapping for JSON-only)
+    const mappedReviews = reviews
+      .map((r) => {
+        let businessId = null;
+        if (r.businessType === "clinic")
+          businessId = 1; // map to Palos Healthcare
+        else if (r.businessType === "doctor") businessId = 2; // map to Orland Advanced Dentistry
+        return { ...r, businessId };
+      })
+      .filter((r) => businessIds.includes(r.businessId));
 
-// PUT update review
-router.put("/:id", async (req, res) => {
-  try {
-    const updatedReview = await Review.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
-    if (!updatedReview)
-      return res.status(404).json({ message: "Review not found" });
-    res.json(updatedReview);
-  } catch (err) {
-    console.error(err);
-    res.status(400).json({ message: "Update failed", error: err.message });
-  }
-});
-
-// DELETE review
-router.delete("/:id", async (req, res) => {
-  try {
-    const deletedReview = await Review.findByIdAndDelete(req.params.id);
-    if (!deletedReview)
-      return res.status(404).json({ message: "Review not found" });
-    res.json({ message: "Review deleted" });
+    res.json(mappedReviews);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });

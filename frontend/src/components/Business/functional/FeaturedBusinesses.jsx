@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import BusinessCard from "../cards/BusinessCard.jsx";
 import businessesJSON from "../data/businesses.json";
+import { getApiBase } from "../../../utils/apiBase.js";
 
 const FeaturedBusinesses = () => {
   const [featured, setFeatured] = useState([]);
@@ -8,10 +9,8 @@ const FeaturedBusinesses = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const useMongo = import.meta.env.VITE_USE_MONGO === "true";
-  const API_BASE = useMongo
-    ? "https://paloshealthcarecom-production.up.railway.app/api"
-    : "http://localhost:5000/api";
+  const API_BASE = getApiBase();
+  const useLocal = import.meta.env.VITE_USE_LOCAL_API === "true"; // <-- define flag
 
   useEffect(() => {
     const loadFeaturedBusinesses = async () => {
@@ -19,10 +18,10 @@ const FeaturedBusinesses = () => {
       setError(null);
 
       try {
-        if (useMongo) {
+        if (!useLocal) {
           console.log("----------- using MongoDB data structure -----------");
           const businessesResponse = await fetch(
-            `${API_BASE}/businesses?featured=true`
+            `${API_BASE}/businesses/featured`
           );
           const businessesData = await businessesResponse.json();
           setFeatured(businessesData);
@@ -61,7 +60,7 @@ const FeaturedBusinesses = () => {
     };
 
     loadFeaturedBusinesses();
-  }, [useMongo, API_BASE]);
+  }, [API_BASE, useLocal]);
 
   if (loading)
     return (

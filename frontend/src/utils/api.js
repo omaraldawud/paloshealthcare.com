@@ -1,4 +1,5 @@
 // /src/util/api.js
+// small helper for fetching businesses from a hardcoded API endpoint.
 //
 export const API_BASE = "http://localhost:5000/api";
 

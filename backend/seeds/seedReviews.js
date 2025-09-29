@@ -1,12 +1,16 @@
 // backend/seeds/seedReviews.js
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const fs = require("fs");
+const path = require("path");
+
 dotenv.config();
 
 const Business = require("../models/Business");
 const User = require("../models/User");
 const Review = require("../models/Review");
 
+// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -18,13 +22,12 @@ mongoose
     process.exit(1);
   });
 
-const sampleComments = [
-  "Excellent service, highly recommend!",
-  "Very professional and friendly staff.",
-  "Would not recommend, long wait times.",
-  "Great experience, will come back.",
-  "Affordable and reliable care.",
-];
+// Load sample reviews JSON
+const reviewsFilePath = path.join(
+  __dirname,
+  "../../frontend/src/components/Business/data/sampleMedReviews.json"
+);
+const sampleReviews = JSON.parse(fs.readFileSync(reviewsFilePath, "utf-8"));
 
 const seedReviews = async () => {
   try {
@@ -36,26 +39,34 @@ const seedReviews = async () => {
       process.exit();
     }
 
-    // Delete existing reviews
+    // Map users by old JSON id (u1, u2, etc.) to real MongoDB _id
+    const usersMap = {};
+    users.forEach((user) => {
+      usersMap[user.name] = user._id; // match by name, assuming names are unique in sample
+    });
+
+    // Remove existing reviews
     await Review.deleteMany();
 
     const reviewsToInsert = [];
 
-    businesses.forEach((business) => {
-      // Randomly create 1-3 reviews per business
-      const reviewCount = Math.floor(Math.random() * 3) + 1;
+    sampleReviews.forEach((review) => {
+      // Pick a random business for this review
+      const randomBusiness =
+        businesses[Math.floor(Math.random() * businesses.length)];
 
-      for (let i = 0; i < reviewCount; i++) {
-        const randomUser = users[Math.floor(Math.random() * users.length)];
+      // Find corresponding user by name
+      const userId = usersMap[review.user.name];
+      if (!userId) return; // skip if user not found
 
-        reviewsToInsert.push({
-          businessId: business._id,
-          userId: randomUser._id,
-          rating: Math.floor(Math.random() * 5) + 1,
-          comment:
-            sampleComments[Math.floor(Math.random() * sampleComments.length)],
-        });
-      }
+      reviewsToInsert.push({
+        businessId: randomBusiness._id,
+        userId,
+        rating: review.rating,
+        comment: review.text,
+        createdAt: review.time_created,
+        updatedAt: review.time_created,
+      });
     });
 
     const created = await Review.insertMany(reviewsToInsert);

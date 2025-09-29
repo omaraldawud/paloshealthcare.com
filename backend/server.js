@@ -2,19 +2,18 @@ const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const connectDB = require("./config/db");
+const path = require("path");
+const cors = require("cors");
+
 const businessRoutes = require("./routes/businessRoutes");
 const userRoutes = require("./routes/userRoutes");
 const reviewRoutes = require("./routes/reviewRoutes");
-const cors = require("cors");
-const path = require("path");
-
-connectDB();
 
 const app = express();
 
+// Middleware
 app.use(cors());
-app.use(express.json()); // parse JSON
+app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // Routes

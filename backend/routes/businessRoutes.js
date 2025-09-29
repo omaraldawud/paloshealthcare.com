@@ -29,16 +29,24 @@ router.get("/featured", async (req, res) => {
 // GET /api/businesses/search?query=...
 router.get("/search", async (req, res) => {
   const { query } = req.query;
-  if (!query) return res.json([]);
+  if (!query || !query.trim()) return res.json([]);
 
   try {
-    const results = await Business.find(
-      { $text: { $search: query } },
-      { score: { $meta: "textScore" } }
-    ).sort({ score: { $meta: "textScore" } });
+    const regex = new RegExp(query, "i"); // case-insensitive partial match
+
+    const results = await Business.find({
+      $or: [
+        { name: regex },
+        { description: regex },
+        { doctors: { $elemMatch: { $regex: regex } } }, // if doctors is array
+        { specialties: { $elemMatch: { $regex: regex } } }, // if specialties is array
+        { affilationHostpitals: regex },
+      ],
+    }).limit(50);
 
     res.json(results);
   } catch (err) {
+    console.error("Search error:", err);
     res.status(500).json({ error: err.message });
   }
 });
