@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.9.0...v1.10.0) (2025-09-29)
+
+
+### Features
+
+* updated test data ([6367507](https://github.com/omaraldawud/paloshealthcare.com/commit/6367507e46860627cc5f79700e750d6be2e687d3))
+
 # [1.9.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.8.0...v1.9.0) (2025-09-29)
 
 
