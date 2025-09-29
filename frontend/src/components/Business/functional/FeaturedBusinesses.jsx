@@ -18,15 +18,20 @@ const FeaturedBusinesses = () => {
       setError(null);
 
       try {
+        //TODO remove logs
+        console.log("useLocal: ", useLocal, "API_BASE:", API_BASE);
         if (!useLocal) {
-          console.log("----------- using MongoDB data structure -----------");
           const businessesResponse = await fetch(
             `${API_BASE}/businesses/featured`
           );
           const businessesData = await businessesResponse.json();
           setFeatured(businessesData);
 
+          //TODO remove logs
+          console.log("businessData=", businessData);
+          console.log("API_BASE===== ", API_BASE);
           const businessIds = businessesData.map((b) => b._id);
+          consol.log("BIDs: ", businessIds);
           if (businessIds.length > 0) {
             const reviewsResponse = await fetch(
               `${API_BASE}/reviews/by-businesses`,
@@ -47,7 +52,6 @@ const FeaturedBusinesses = () => {
             setReviews(reviewMap);
           }
         } else {
-          console.log("----------- using local data structure -----------");
           setFeatured(businessesJSON.filter((b) => b.featured));
         }
       } catch (err) {
