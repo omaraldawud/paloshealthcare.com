@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.8.0...v1.9.0) (2025-09-29)
+
+
+### Features
+
+* Google Update Tracking Code ([9a7ac5c](https://github.com/omaraldawud/paloshealthcare.com/commit/9a7ac5c70b7f92afb39a0a3e2bfb85ccd0e77023))
+
 # [1.8.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.7.0...v1.8.0) (2025-09-29)
 
 
