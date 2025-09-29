@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.6.0...v1.7.0) (2025-09-29)
+
+
+### Features
+
+* Redesign Business Card ([c33dcf7](https://github.com/omaraldawud/paloshealthcare.com/commit/c33dcf7675e5d3aa5bf891799aa5483e61e9b464))
+
 # [1.6.0](https://github.com/omaraldawud/paloshealthcare.com/compare/v1.5.0...v1.6.0) (2025-09-26)
 
 
